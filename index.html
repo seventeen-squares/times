@@ -1,898 +1,624 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Times Capital Finance</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#3F1DC9',
-            'primary-dark': '#2e15a0',
-            'primary-light': '#EBE5FF',
-            teal: '#1CABA8',
-            'teal-light': '#24B9B6',
-            blue: '#42A5F5',
-            dark: '#0F0F14',
-            'gray-body': '#666666',
-            'gray-mid': '#737373',
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Times Capital Finance | Finance That Moves Malawi Forward</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-error-container": "#93000a",
+                "inverse-primary": "#ffb4ab",
+                "on-surface": "#1c1b1b",
+                "on-secondary-container": "#65645f",
+                "error-container": "#ffdad6",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-low": "#f6f3f2",
+                "surface-tint": "#bc1319",
+                "secondary": "#5f5e59",
+                "on-primary": "#ffffff",
+                "surface-variant": "#e5e2e1",
+                "secondary-fixed-dim": "#c9c6c0",
+                "surface-dim": "#dcd9d9",
+                "inverse-surface": "#313030",
+                "surface-bright": "#fcf9f8",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#e5e2db",
+                "on-surface-variant": "#5c403d",
+                "primary-fixed-dim": "#ffb4ab",
+                "tertiary-fixed": "#86fd62",
+                "surface": "#fcf9f8",
+                "tertiary": "#166300",
+                "on-primary-container": "#ffeeeb",
+                "inverse-on-surface": "#f3f0ef",
+                "primary-fixed": "#ffdad6",
+                "outline-variant": "#e5bdb9",
+                "surface-container-high": "#eae7e7",
+                "on-primary-fixed": "#410002",
+                "on-primary-fixed-variant": "#93000c",
+                "on-tertiary-fixed-variant": "#105300",
+                "on-tertiary-container": "#ceffb7",
+                "secondary-fixed": "#e5e2db",
+                "background": "#fcf9f8",
+                "tertiary-container": "#1e7f00",
+                "on-tertiary-fixed": "#032100",
+                "on-tertiary": "#ffffff",
+                "primary": "#af0211",
+                "outline": "#906f6b",
+                "surface-container-highest": "#e5e2e1",
+                "error": "#ba1a1a",
+                "on-secondary-fixed": "#1c1c18",
+                "on-error": "#ffffff",
+                "surface-container": "#f0eded",
+                "on-secondary-fixed-variant": "#474742",
+                "tertiary-fixed-dim": "#6ae049",
+                "primary-container": "#d32827",
+                "on-background": "#1c1b1b"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "md": "24px",
+                "lg": "48px",
+                "gutter": "24px",
+                "sm": "12px",
+                "xs": "4px",
+                "xl": "80px",
+                "container-max": "1200px",
+                "base": "8px"
+            },
+            "fontFamily": {
+                "headline-lg-mobile": ["Newsreader"],
+                "headline-xl": ["Newsreader"],
+                "headline-sm": ["Newsreader"],
+                "body-sm": ["Manrope"],
+                "headline-lg": ["Newsreader"],
+                "body-lg": ["Manrope"],
+                "label-sm": ["Manrope"],
+                "label-md": ["Manrope"],
+                "headline-md": ["Newsreader"],
+                "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
+                "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
           },
         },
-      },
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .gradient-hero {
-      background: linear-gradient(135deg, #0F0F14 0%, #1a1040 50%, #3F1DC9 100%);
-    }
-    .gradient-cta {
-      background: linear-gradient(135deg, #3F1DC9 0%, #1CABA8 100%);
-    }
-    .card-hover {
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card-hover:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(63, 29, 201, 0.12);
-    }
-    .stat-card {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-    .faq-answer {
-      display: none;
-    }
-    .faq-answer.open {
-      display: block;
-    }
-    .faq-icon {
-      transition: transform 0.2s ease;
-    }
-    .faq-icon.open {
-      transform: rotate(45deg);
-    }
-    .step-connector {
-      background: linear-gradient(90deg, #3F1DC9, #1CABA8);
-    }
-  </style>
-</head>
-<body class="font-sans text-dark bg-white antialiased">
-
-  <!-- ============================================================
-       NAVIGATION
-  ============================================================ -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg, #3F1DC9, #1CABA8);">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 2L3 7v11h14V7L10 2z" fill="white" fill-opacity="0.9"/>
-              <path d="M7 18v-5h6v5" fill="#3F1DC9"/>
-            </svg>
-          </div>
-          <div class="leading-tight">
-            <span class="text-base font-800 text-dark block" style="font-weight:800; line-height:1.1;">Times Capital</span>
-            <span class="text-xs font-semibold tracking-widest uppercase" style="color:#1CABA8; line-height:1.1;">Finance</span>
-          </div>
-        </a>
-
-        <!-- Desktop Nav Links -->
-        <div class="hidden md:flex items-center gap-7">
-          <a href="#about" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">About</a>
-          <a href="#services" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Personal Loans</a>
-          <a href="#services" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Business Solutions</a>
-          <a href="#contact" class="text-sm font-medium text-gray-600 hover:text-primary transition-colors">Contact Us</a>
-        </div>
-
-        <!-- CTA Buttons -->
-        <div class="hidden md:flex items-center gap-3">
-          <a href="#" class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors">Login</a>
-          <a href="#apply" class="px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90 hover:shadow-lg" style="background: linear-gradient(135deg, #3F1DC9, #1CABA8);">Get started</a>
-        </div>
-
-        <!-- Mobile hamburger -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 bg-white">
-      <div class="px-4 py-4 space-y-3">
-        <a href="#about" class="block text-sm font-medium text-gray-600 hover:text-primary py-1.5">About</a>
-        <a href="#services" class="block text-sm font-medium text-gray-600 hover:text-primary py-1.5">Personal Loans</a>
-        <a href="#services" class="block text-sm font-medium text-gray-600 hover:text-primary py-1.5">Business Solutions</a>
-        <a href="#contact" class="block text-sm font-medium text-gray-600 hover:text-primary py-1.5">Contact Us</a>
-        <div class="pt-2 flex flex-col gap-2">
-          <a href="#" class="text-sm font-semibold text-primary text-center py-2">Login</a>
-          <a href="#apply" class="px-5 py-2.5 rounded-lg text-sm font-semibold text-white text-center" style="background: linear-gradient(135deg, #3F1DC9, #1CABA8);">Get started</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
-  <!-- ============================================================
-       HERO SECTION
-  ============================================================ -->
-  <section class="gradient-hero relative overflow-hidden">
-    <!-- Background decorative elements -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-      <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-20" style="background: radial-gradient(circle, #3F1DC9, transparent);"></div>
-      <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full opacity-10" style="background: radial-gradient(circle, #1CABA8, transparent);"></div>
-      <div class="absolute top-1/2 right-1/4 w-2 h-2 rounded-full bg-white opacity-40"></div>
-      <div class="absolute top-1/4 right-1/3 w-1.5 h-1.5 rounded-full opacity-30" style="background:#24B9B6;"></div>
-      <div class="absolute bottom-1/3 left-1/4 w-1 h-1 rounded-full bg-white opacity-20"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10 relative">
-      <div class="max-w-3xl mx-auto text-center">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8 border" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #24B9B6;">
-          <span class="w-1.5 h-1.5 rounded-full bg-teal-400" style="background:#24B9B6;"></span>
-          Trusted since 2025
-        </div>
-
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6" style="letter-spacing: -0.03em;">
-          Finance That Moves<br />
-          <span style="background: linear-gradient(90deg, #42A5F5, #24B9B6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Malawi Forward</span>
-        </h1>
-
-        <p class="text-lg text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">
-          Tailored financial solutions for civil servants, entrepreneurs, and families. Fast approval, competitive rates, and a partner who understands your journey.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <a href="#apply" class="px-8 py-4 rounded-xl font-bold text-dark text-base transition-all hover:shadow-xl hover:scale-105" style="background: linear-gradient(135deg, #42A5F5, #24B9B6);">
-            Apply For a Loan
-          </a>
-          <a href="#contact" class="px-8 py-4 rounded-xl font-semibold text-white text-base border-2 transition-all hover:bg-white/10" style="border-color: rgba(255,255,255,0.3);">
-            Contact Us
-          </a>
-        </div>
-
-        <!-- Stats Row -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="stat-card rounded-2xl p-6 text-center">
-            <div class="text-3xl font-black text-white mb-1">MWK 5B+</div>
-            <div class="text-xs font-medium text-white/50 uppercase tracking-wider">Loans issued</div>
-          </div>
-          <div class="stat-card rounded-2xl p-6 text-center">
-            <div class="text-3xl font-black text-white mb-1">15,000+</div>
-            <div class="text-xs font-medium text-white/50 uppercase tracking-wider">Customers Served</div>
-          </div>
-          <div class="stat-card rounded-2xl p-6 text-center">
-            <div class="text-3xl font-black text-white mb-1">98%</div>
-            <div class="text-xs font-medium text-white/50 uppercase tracking-wider">Client Satisfaction</div>
-          </div>
-          <div class="stat-card rounded-2xl p-6 text-center">
-            <div class="text-3xl font-black text-white mb-1">10+</div>
-            <div class="text-xs font-medium text-white/50 uppercase tracking-wider">Months of Service</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom wave -->
-    <div class="relative h-16 -mb-1">
-      <svg viewBox="0 0 1440 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute bottom-0 w-full">
-        <path d="M0 64L1440 64L1440 20C1200 60 960 0 720 20C480 40 240 0 0 20L0 64Z" fill="white"/>
-      </svg>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       ABOUT SECTION
-  ============================================================ -->
-  <section id="about" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <!-- Left: Text -->
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-6" style="background:#EBE5FF; color:#3F1DC9;">
-            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            About Us
-          </div>
-          <h2 class="text-4xl lg:text-5xl font-black text-dark mb-6 leading-tight" style="letter-spacing: -0.02em;">
-            Your Partner in Financial <span style="color:#3F1DC9;">Growth & Stability</span>
-          </h2>
-          <p class="text-gray-600 leading-relaxed mb-8 text-base">
-            Times Capital Finance is more than just a lender. We are a locally-rooted institution dedicated to understanding the unique financial landscape of Malawi. We believe that everyone deserves the chance to pursue their dreams, whether it's educating their children, growing a business, or securing their family's future.
-          </p>
-
-          <!-- Trust Badges -->
-          <div class="flex flex-col sm:flex-row gap-4">
-            <div class="flex items-center gap-3 px-5 py-3 rounded-xl border" style="border-color:#EBE5FF; background:#F8F7FF;">
-              <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background:#EBE5FF;">
-                <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-              </div>
-              <div>
-                <div class="text-xs font-bold text-dark">Locally Managed & Owned</div>
-                <div class="text-xs text-gray-500">Decisions made in Lilongwe and Blantyre.</div>
-              </div>
-            </div>
-            <div class="flex items-center gap-3 px-5 py-3 rounded-xl border" style="border-color:#EBE5FF; background:#F8F7FF;">
-              <div class="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0" style="background:#EBE5FF;">
-                <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              </div>
-              <div>
-                <div class="text-xs font-bold text-dark">Regulatory Compliance</div>
-                <div class="text-xs text-gray-500">Licensed by the Reserve Bank of Malawi.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Mission & Vision cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          <div class="rounded-2xl p-7 card-hover" style="background: linear-gradient(135deg, #3F1DC9 0%, #2e15a0 100%);">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style="background: rgba(255,255,255,0.15);">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-3">Our Mission</h3>
-            <p class="text-sm text-white/70 leading-relaxed">
-              To provide accessible, ethical, and innovative financial services that foster economic growth and improve Malawian livelihoods.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-7 card-hover sm:mt-8" style="background: linear-gradient(135deg, #1CABA8 0%, #24B9B6 100%);">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center mb-5" style="background: rgba(255,255,255,0.15);">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-              </svg>
-            </div>
-            <h3 class="text-lg font-bold text-white mb-3">Our Vision</h3>
-            <p class="text-sm text-white/70 leading-relaxed">
-              To be the leading financial catalyst for a prosperous and financially inclusive Malawi.
-            </p>
-          </div>
-
-          <!-- Bottom wide card -->
-          <div class="sm:col-span-2 rounded-2xl p-7 card-hover" style="background:#F2F5FE; border: 1px solid #EBE5FF;">
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#EBE5FF;">
-                <svg class="w-5 h-5" style="color:#3F1DC9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="text-sm font-bold text-dark mb-1">Fully Regulated & Trusted</div>
-                <div class="text-sm text-gray-500">Reserve Bank of Malawi License No: TC-044-2014. Your deposits and data are protected under Malawian financial law.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       SERVICES SECTION
-  ============================================================ -->
-  <section id="services" class="py-24" style="background:#F8F8F8;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Header -->
-      <div class="text-center mb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background:#EBE5FF; color:#3F1DC9;">
-          Our Services
-        </div>
-        <h2 class="text-4xl lg:text-5xl font-black text-dark mb-4" style="letter-spacing:-0.02em;">Our Financial Solutions</h2>
-        <p class="text-gray-500 max-w-xl mx-auto">Explore our range of credit and advisory services designed to meet your specific needs.</p>
-      </div>
-
-      <!-- Cards Grid -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Salary-Based Loans -->
-        <div class="bg-white rounded-2xl p-7 card-hover border border-gray-100">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#EBE5FF;">
-            <svg class="w-6 h-6" style="color:#3F1DC9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-bold text-dark mb-2">Salary-Based Loans</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Fast personal loans for civil servants and private sector employees with competitive interest rates.</p>
-          <a href="#apply" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#3F1DC9;">
-            Learn more
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Emergency Loans -->
-        <div class="bg-white rounded-2xl p-7 card-hover border border-gray-100">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: #E0F7F6;">
-            <svg class="w-6 h-6" style="color:#1CABA8;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-bold text-dark mb-2">Emergency Loans</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">24-hour turnaround for unexpected medical bills, repairs, or urgent family matters.</p>
-          <a href="#apply" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#1CABA8;">
-            Learn more
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- SME Financing -->
-        <div class="bg-white rounded-2xl p-7 card-hover border border-gray-100">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#EBE5FF;">
-            <svg class="w-6 h-6" style="color:#3F1DC9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-bold text-dark mb-2">SME Financing</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Flexible working capital and growth capital for small to medium-sized enterprises.</p>
-          <a href="#apply" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#3F1DC9;">
-            Learn more
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Asset Financing -->
-        <div class="bg-white rounded-2xl p-7 card-hover border border-gray-100">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: #E0F7F6;">
-            <svg class="w-6 h-6" style="color:#1CABA8;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-bold text-dark mb-2">Asset Financing</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Get the vehicles or equipment your business needs to expand with manageable payment plans.</p>
-          <a href="#apply" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#1CABA8;">
-            Learn more
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Financial Advisory -->
-        <div class="bg-white rounded-2xl p-7 card-hover border border-gray-100">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#EBE5FF;">
-            <svg class="w-6 h-6" style="color:#3F1DC9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-bold text-dark mb-2">Financial Advisory</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Personalised consulting to help you manage debt, save effectively, and invest for the future.</p>
-          <a href="#apply" class="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#3F1DC9;">
-            Learn more
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-
-        <!-- Digital Banking – Coming Soon -->
-        <div class="rounded-2xl p-7 border-2 border-dashed border-gray-200 relative overflow-hidden" style="background:#FAFAFA;">
-          <div class="absolute top-4 right-4 px-2.5 py-1 rounded-full text-xs font-bold text-white" style="background:#3F1DC9;">Coming Soon</div>
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 bg-gray-100">
-            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <h3 class="text-base font-bold text-gray-400 mb-2">Digital Banking</h3>
-          <p class="text-sm text-gray-400 leading-relaxed">Manage your accounts, check balances, and apply for credit directly from your mobile device.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       HOW IT WORKS
-  ============================================================ -->
-  <section id="apply" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background:#EBE5FF; color:#3F1DC9;">
-          Easy Application
-        </div>
-        <h2 class="text-4xl lg:text-5xl font-black text-dark mb-4" style="letter-spacing:-0.02em;">Simple 4-Step Application</h2>
-        <p class="text-gray-500 max-w-xl mx-auto">We've streamlined our process to ensure you get the funds you need without the headache.</p>
-      </div>
-
-      <div class="relative">
-        <!-- Connector line (desktop) -->
-        <div class="hidden lg:block absolute top-14 left-[12.5%] right-[12.5%] h-0.5" style="background: linear-gradient(90deg, #3F1DC9, #1CABA8);"></div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Step 1 -->
-          <div class="text-center relative">
-            <div class="w-14 h-14 rounded-2xl mx-auto mb-6 flex items-center justify-center text-white font-black text-xl relative z-10" style="background: linear-gradient(135deg, #3F1DC9, #5a3de8);">01</div>
-            <h3 class="text-base font-bold text-dark mb-2">Apply Online</h3>
-            <p class="text-sm text-gray-500 leading-relaxed">Complete our simple 5-minute application form with basic details.</p>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="text-center relative">
-            <div class="w-14 h-14 rounded-2xl mx-auto mb-6 flex items-center justify-center text-white font-black text-xl relative z-10" style="background: linear-gradient(135deg, #5a3de8, #2880c4);">02</div>
-            <h3 class="text-base font-bold text-dark mb-2">Verification</h3>
-            <p class="text-sm text-gray-500 leading-relaxed">Our team reviews your documents and credit profile swiftly.</p>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="text-center relative">
-            <div class="w-14 h-14 rounded-2xl mx-auto mb-6 flex items-center justify-center text-white font-black text-xl relative z-10" style="background: linear-gradient(135deg, #2880c4, #1CABA8);">03</div>
-            <h3 class="text-base font-bold text-dark mb-2">Approval</h3>
-            <p class="text-sm text-gray-500 leading-relaxed">Receive an offer with clear terms and competitive interest rates.</p>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="text-center relative">
-            <div class="w-14 h-14 rounded-2xl mx-auto mb-6 flex items-center justify-center text-white font-black text-xl relative z-10" style="background: linear-gradient(135deg, #1CABA8, #24B9B6);">04</div>
-            <h3 class="text-base font-bold text-dark mb-2">Disbursement</h3>
-            <p class="text-sm text-gray-500 leading-relaxed">Funds are transferred directly to your bank account within 24 hours.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Apply CTA -->
-      <div class="text-center mt-14">
-        <a href="#" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-bold text-white text-base transition-all hover:opacity-90 hover:shadow-xl" style="background: linear-gradient(135deg, #3F1DC9, #1CABA8);">
-          Start Your Application
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       WHY CHOOSE
-  ============================================================ -->
-  <section class="py-24" style="background:#F2F5FE;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background:#EBE5FF; color:#3F1DC9;">
-          Why Us
-        </div>
-        <h2 class="text-4xl lg:text-5xl font-black text-dark mb-4" style="letter-spacing:-0.02em;">Why Choose Times Capital?</h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Trust & Security -->
-        <div class="bg-white rounded-2xl p-8 card-hover border border-gray-100">
-          <div class="flex items-start gap-5 mb-6">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:#EBE5FF;">
-              <svg class="w-6 h-6" style="color:#3F1DC9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-bold text-dark mb-1">Trust & Security</h3>
-              <p class="text-sm text-gray-500 leading-relaxed">We prioritise the safety of your data and the integrity of our financial practices. As a regulated institution, your peace of mind is our top priority.</p>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <div class="flex items-center gap-3">
-              <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background:#EBE5FF;">
-                <svg class="w-3 h-3" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              </div>
-              <span class="text-sm text-gray-600">Transparent Conditions</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background:#EBE5FF;">
-                <svg class="w-3 h-3" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              </div>
-              <span class="text-sm text-gray-600">No Hidden Fees</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background:#EBE5FF;">
-                <svg class="w-3 h-3" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              </div>
-              <span class="text-sm text-gray-600">Competitive Rates</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Speed & Efficiency -->
-        <div class="bg-white rounded-2xl p-8 card-hover border border-gray-100">
-          <div class="flex items-start gap-5 mb-6">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: #E0F7F6;">
-              <svg class="w-6 h-6" style="color:#1CABA8;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-lg font-bold text-dark mb-1">Speed & Efficiency</h3>
-              <p class="text-sm text-gray-500 leading-relaxed">Financial needs don't wait. Our digital-first approach allows us to process applications and disburse funds faster than traditional banks.</p>
-            </div>
-          </div>
-          <div class="space-y-3">
-            <div class="flex items-center gap-3">
-              <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: #E0F7F6;">
-                <svg class="w-3 h-3" style="color:#1CABA8;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              </div>
-              <span class="text-sm text-gray-600">Transparent Conditions</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: #E0F7F6;">
-                <svg class="w-3 h-3" style="color:#1CABA8;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              </div>
-              <span class="text-sm text-gray-600">No Hidden Fees</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: #E0F7F6;">
-                <svg class="w-3 h-3" style="color:#1CABA8;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-              </div>
-              <span class="text-sm text-gray-600">Competitive Rates</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       TESTIMONIALS
-  ============================================================ -->
-  <section class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background:#EBE5FF; color:#3F1DC9;">
-          Testimonials
-        </div>
-        <h2 class="text-4xl lg:text-5xl font-black text-dark mb-4" style="letter-spacing:-0.02em;">Voices of Our Customers</h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-7">
-        <!-- Testimonial 1 -->
-        <div class="rounded-2xl p-7 card-hover border border-gray-100" style="background:#F8F7FF;">
-          <!-- Stars -->
-          <div class="flex gap-1 mb-5">
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-sm text-gray-700 leading-relaxed mb-6 italic">
-            "The salary loan process was incredibly smooth. I managed to pay my daughter's university fees just in time. Truly a life saver!"
-          </p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm" style="background: linear-gradient(135deg, #3F1DC9, #5a3de8);">JB</div>
-            <div>
-              <div class="text-sm font-bold text-dark">Josephine Banda</div>
-              <div class="text-xs text-gray-400">Civil Servant, Lilongwe</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="rounded-2xl p-7 card-hover border border-gray-100" style="background: #F0FAFA;">
-          <div class="flex gap-1 mb-5">
-            <svg class="w-4 h-4" style="color:#1CABA8;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#1CABA8;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#1CABA8;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#1CABA8;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#1CABA8;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-sm text-gray-700 leading-relaxed mb-6 italic">
-            "As a small business owner, finding a bank that understands the local market is hard. Times Capital believed in my vision."
-          </p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm" style="background: linear-gradient(135deg, #1CABA8, #24B9B6);">LP</div>
-            <div>
-              <div class="text-sm font-bold text-dark">Limbani Phiri</div>
-              <div class="text-xs text-gray-400">Entrepreneur, Blantyre</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="rounded-2xl p-7 card-hover border border-gray-100" style="background:#F8F7FF;">
-          <div class="flex gap-1 mb-5">
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4" style="color:#3F1DC9;" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="text-sm text-gray-700 leading-relaxed mb-6 italic">
-            "Transparent, professional, and helpful. No hidden fees or surprises. Their financial advisory also helped me plan my savings better."
-          </p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm" style="background: linear-gradient(135deg, #3F1DC9, #1CABA8);">GM</div>
-            <div>
-              <div class="text-sm font-bold text-dark">Grace Mwale</div>
-              <div class="text-xs text-gray-400">Nurse, Zomba</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       CONTACT SECTION
-  ============================================================ -->
-  <section id="contact" class="py-24" style="background:#F8F8F8;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background:#EBE5FF; color:#3F1DC9;">
-          Contact
-        </div>
-        <h2 class="text-4xl lg:text-5xl font-black text-dark mb-4" style="letter-spacing:-0.02em;">Get in Touch</h2>
-        <p class="text-gray-500 max-w-md mx-auto">Have questions? Our support team is here to assist you with any inquiries about our services.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        <!-- Phone -->
-        <div class="bg-white rounded-2xl p-7 text-center card-hover border border-gray-100">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:#EBE5FF;">
-            <svg class="w-6 h-6" style="color:#3F1DC9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-            </svg>
-          </div>
-          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#3F1DC9;">PHONE</div>
-          <div class="text-sm font-semibold text-dark">+265 881 234 567</div>
-        </div>
-
-        <!-- Email -->
-        <div class="bg-white rounded-2xl p-7 text-center card-hover border border-gray-100">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background: #E0F7F6;">
-            <svg class="w-6 h-6" style="color:#1CABA8;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#1CABA8;">EMAIL</div>
-          <div class="text-sm font-semibold text-dark">support@timescapital.mw</div>
-        </div>
-
-        <!-- Address -->
-        <div class="bg-white rounded-2xl p-7 text-center card-hover border border-gray-100">
-          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5" style="background:#EBE5FF;">
-            <svg class="w-6 h-6" style="color:#3F1DC9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-          </div>
-          <div class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#3F1DC9;">ADDRESS</div>
-          <div class="text-sm font-semibold text-dark">Times Offices, Chilambula Road, Lilongwe</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       FAQ SECTION
-  ============================================================ -->
-  <section class="py-24 bg-white">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-14">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background:#EBE5FF; color:#3F1DC9;">
-          FAQ
-        </div>
-        <h2 class="text-4xl lg:text-5xl font-black text-dark mb-4" style="letter-spacing:-0.02em;">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="space-y-4">
-        <!-- Q1 – open by default -->
-        <div class="faq-item rounded-2xl border overflow-hidden" style="border-color:#EBE5FF;">
-          <button class="faq-btn w-full flex items-center justify-between p-6 text-left" style="background:#F8F7FF;">
-            <span class="text-sm font-semibold text-dark">What are the eligibility requirements for a loan?</span>
-            <svg class="faq-icon w-5 h-5 flex-shrink-0" style="color:#3F1DC9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-            </svg>
-          </button>
-          <div class="faq-answer open px-6 pb-6" style="background:#F8F7FF;">
-            <p class="text-sm text-gray-500 leading-relaxed">Eligibility depends on the loan type. Generally, you need to be a Malawian resident, 18+ years old, and have a steady source of income (salary or business). Specific documents like National ID and proof of income will be required.</p>
-          </div>
-        </div>
-
-        <!-- Q2 -->
-        <div class="faq-item rounded-2xl border border-gray-100 overflow-hidden">
-          <button class="faq-btn w-full flex items-center justify-between p-6 text-left bg-white">
-            <span class="text-sm font-semibold text-dark">How long does the approval process take?</span>
-            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-6 bg-white">
-            <p class="text-sm text-gray-500 leading-relaxed">Most applications are reviewed within a few hours. Emergency loans can be approved and disbursed within 24 hours of submitting complete documentation.</p>
-          </div>
-        </div>
-
-        <!-- Q3 -->
-        <div class="faq-item rounded-2xl border border-gray-100 overflow-hidden">
-          <button class="faq-btn w-full flex items-center justify-between p-6 text-left bg-white">
-            <span class="text-sm font-semibold text-dark">Are there any hidden fees?</span>
-            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-6 bg-white">
-            <p class="text-sm text-gray-500 leading-relaxed">No. Times Capital Finance is committed to full transparency. All fees, rates, and charges are clearly stated in your loan agreement before you sign. What you see is what you get.</p>
-          </div>
-        </div>
-
-        <!-- Q4 -->
-        <div class="faq-item rounded-2xl border border-gray-100 overflow-hidden">
-          <button class="faq-btn w-full flex items-center justify-between p-6 text-left bg-white">
-            <span class="text-sm font-semibold text-dark">Can I settle my loan early?</span>
-            <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-6 bg-white">
-            <p class="text-sm text-gray-500 leading-relaxed">Yes, early settlement is allowed and encouraged. Please contact our team to get a settlement quote. Early repayment may result in reduced interest charges.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       CTA SECTION
-  ============================================================ -->
-  <section class="py-24 gradient-cta relative overflow-hidden">
-    <!-- Decorative blobs -->
-    <div class="absolute inset-0 pointer-events-none overflow-hidden">
-      <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full opacity-10" style="background: white;"></div>
-      <div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full opacity-10" style="background: white;"></div>
-    </div>
-
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-      <h2 class="text-4xl lg:text-5xl font-black text-white mb-5" style="letter-spacing:-0.02em;">
-        Ready to Take Your Next<br />Financial Step?
-      </h2>
-      <p class="text-white/80 text-base mb-10 max-w-lg mx-auto leading-relaxed">
-        Join 15,000+ Malawians who trust Times Capital for their financial needs. Apply today and get approved in hours.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" class="px-8 py-4 rounded-xl font-bold text-dark text-base transition-all hover:shadow-xl hover:scale-105 bg-white">
-          Download Forms
-        </a>
-        <a href="#contact" class="px-8 py-4 rounded-xl font-semibold text-white text-base border-2 border-white/40 transition-all hover:bg-white/10">
-          Talk to Expert
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer style="background:#0F0F14;" class="text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <!-- Brand -->
-        <div class="lg:col-span-1">
-          <div class="flex items-center gap-2.5 mb-5">
-            <div class="w-9 h-9 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg, #3F1DC9, #1CABA8);">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2L3 7v11h14V7L10 2z" fill="white" fill-opacity="0.9"/>
-                <path d="M7 18v-5h6v5" fill="#3F1DC9"/>
-              </svg>
-            </div>
-            <div class="leading-tight">
-              <span class="text-base font-black text-white block" style="line-height:1.1;">Times Capital</span>
-              <span class="text-xs font-semibold tracking-widest uppercase" style="color:#1CABA8; line-height:1.1;">Finance</span>
-            </div>
-          </div>
-          <p class="text-sm text-white/50 leading-relaxed mb-4">
-            Your trusted financial partner in Malawi. Licensed and regulated by the Reserve Bank of Malawi.
-          </p>
-          <div class="flex gap-3">
-            <a href="#" class="w-8 h-8 rounded-lg flex items-center justify-center transition-colors" style="background: rgba(255,255,255,0.08);" aria-label="Facebook">
-              <svg class="w-4 h-4 text-white/60" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            </a>
-            <a href="#" class="w-8 h-8 rounded-lg flex items-center justify-center transition-colors" style="background: rgba(255,255,255,0.08);" aria-label="Twitter">
-              <svg class="w-4 h-4 text-white/60" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
-            </a>
-            <a href="#" class="w-8 h-8 rounded-lg flex items-center justify-center transition-colors" style="background: rgba(255,255,255,0.08);" aria-label="LinkedIn">
-              <svg class="w-4 h-4 text-white/60" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <h4 class="text-sm font-bold text-white mb-5">Services</h4>
-          <ul class="space-y-3">
-            <li><a href="#services" class="text-sm text-white/50 hover:text-white transition-colors">Salary Loans</a></li>
-            <li><a href="#services" class="text-sm text-white/50 hover:text-white transition-colors">Business Capital</a></li>
-            <li><a href="#services" class="text-sm text-white/50 hover:text-white transition-colors">Emergency Funds</a></li>
-            <li><a href="#services" class="text-sm text-white/50 hover:text-white transition-colors">Asset Financing</a></li>
-          </ul>
-        </div>
-
-        <!-- Company -->
-        <div>
-          <h4 class="text-sm font-bold text-white mb-5">Company</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-sm text-white/50 hover:text-white transition-colors">Careers</a></li>
-            <li><a href="#" class="text-sm text-white/50 hover:text-white transition-colors">News &amp; Press</a></li>
-            <li><a href="#about" class="text-sm text-white/50 hover:text-white transition-colors">About</a></li>
-            <li><a href="#contact" class="text-sm text-white/50 hover:text-white transition-colors">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Support -->
-        <div>
-          <h4 class="text-sm font-bold text-white mb-5">Support</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="text-sm text-white/50 hover:text-white transition-colors">Help Center</a></li>
-            <li><a href="#" class="text-sm text-white/50 hover:text-white transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="text-sm text-white/50 hover:text-white transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="text-sm text-white/50 hover:text-white transition-colors">Loan Calculator</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Divider -->
-      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-white/30">© 2026 Times Capital Finance Limited. All rights reserved.</p>
-        <p class="text-xs text-white/30">Reserve Bank License No: TC-044-2014 · Malawi</p>
-      </div>
-    </div>
-  </footer>
-
-
-  <!-- ============================================================
-       SCRIPTS
-  ============================================================ -->
-  <script>
-    // Mobile menu toggle
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when a link is clicked
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-    });
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const answer = item.querySelector('.faq-answer');
-        const icon = btn.querySelector('.faq-icon');
-        const isOpen = answer.classList.contains('open');
-
-        // Close all
-        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-        document.querySelectorAll('.faq-icon').forEach(i => {
-          i.classList.remove('open');
-          i.style.color = '#9ca3af';
-        });
-        document.querySelectorAll('.faq-btn').forEach(b => {
-          b.style.background = '';
-        });
-
-        if (!isOpen) {
-          answer.classList.add('open');
-          icon.classList.add('open');
-          icon.style.color = '#3F1DC9';
-          btn.style.background = '#F8F7FF';
-          item.style.borderColor = '#EBE5FF';
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
         }
-      });
-    });
-  </script>
-</body>
-</html>
+        .financial-shadow {
+            box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.06);
+        }
+        .hero-bg {
+            background-color: #F5F2EB;
+        }
+        .smooth-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<header class="bg-surface sticky top-0 z-50 w-full">
+<div class="flex justify-between items-center w-full px-md py-sm max-w-container-max mx-auto">
+<a class="flex items-center" href="#" aria-label="Times Capital Finance Home">
+<img alt="Times Capital Finance logo" class="h-12 w-auto" src="assets/logo.svg"/>
+</a>
+<nav class="hidden md:flex gap-lg items-center">
+<a class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1" href="#">About</a>
+<a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#">Personal Loans</a>
+<a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#">Business Solutions</a>
+<a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#">Contact Us</a>
+</nav>
+<div class="flex gap-sm items-center">
+<button class="hidden md:block text-label-md font-label-md text-on-surface px-md py-sm hover:text-primary transition-colors">Login</button>
+<button class="bg-primary text-on-primary text-label-md font-label-md px-md py-sm rounded-full active:scale-95 transition-all shadow-md">Get Started</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-bg py-xl overflow-hidden">
+<div class="max-w-container-max mx-auto px-md grid md:grid-cols-2 gap-lg items-center">
+<div class="space-y-md">
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight">
+                        Finance That Moves <br/>
+<span class="text-primary">Malawi</span> Forward
+                    </h1>
+<p class="text-body-lg font-body-lg text-secondary max-w-lg">
+                        Tailored financial solutions for civil servants, entrepreneurs, and families. Fast approval, competitive rates, and a partner who understands your journey.
+                    </p>
+<div class="flex flex-wrap gap-md pt-sm">
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full flex items-center gap-2 font-label-md active:scale-95 smooth-transition shadow-lg">
+                            Apply For a Loan
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="border border-outline text-on-surface px-lg py-sm rounded-full font-label-md hover:bg-surface-container-low active:scale-95 smooth-transition">
+                            Contact Us
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-fixed-dim rounded-full opacity-20 blur-3xl"></div>
+<img alt="Times Capital Finance Professional" class="w-full h-auto rounded-xl financial-shadow relative z-10 border-8 border-white" src="assets/person1.jpg"/>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="bg-surface relative -mt-12 z-20">
+<div class="max-w-container-max mx-auto px-md">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter bg-white p-lg rounded-xl financial-shadow">
+<div class="text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="payments">payments</span>
+<div class="font-headline-md text-headline-md text-on-surface">MWK 5B+</div>
+<div class="text-label-md text-secondary">Loans Issued</div>
+</div>
+<div class="text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="groups">groups</span>
+<div class="font-headline-md text-headline-md text-on-surface">15,000+</div>
+<div class="text-label-md text-secondary">Customers Served</div>
+</div>
+<div class="text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+<div class="font-headline-md text-headline-md text-on-surface">98%</div>
+<div class="text-label-md text-secondary">Client Satisfaction</div>
+</div>
+<div class="text-center space-y-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="schedule">schedule</span>
+<div class="font-headline-md text-headline-md text-on-surface">10+</div>
+<div class="text-label-md text-secondary">Months of Service</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partner Info / Mission & Vision -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-md">
+<div class="grid md:grid-cols-2 gap-xl items-center">
+<div class="grid grid-cols-2 gap-md">
+<div class="col-span-2 relative">
+<img alt="Team Consultation" class="w-full h-48 object-cover rounded-xl shadow-md" src="assets/people2.jpg"/>
+</div>
+<div class="bg-primary p-md rounded-xl text-on-primary space-y-2">
+<h3 class="font-headline-sm text-headline-sm">Our Mission</h3>
+<p class="text-body-sm">To provide accessible, ethical, and innovative financial services that foster economic growth and improve Malawian livelihoods.</p>
+</div>
+<div class="bg-surface-container p-md rounded-xl space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Our Vision</h3>
+<p class="text-body-sm text-secondary">To be the leading financial catalyst for a prosperous and financially inclusive Malawi.</p>
+</div>
+</div>
+<div class="space-y-md">
+<span class="bg-primary-fixed text-on-primary-fixed px-sm py-1 rounded-full text-label-sm">Trusted since 2025</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Your Partner in Financial Growth &amp; Stability</h2>
+<p class="text-body-md text-secondary">Times Capital Finance is more than just a lender. We are a locally-rooted institution dedicated to understanding the unique financial landscape of Malawi. We believe that everyone deserves the chance to pursue their dreams, whether it's educating their children, growing a business, or securing their family's future.</p>
+<ul class="space-y-sm">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-label-md text-on-surface block">Locally Managed &amp; Owned</span>
+<span class="text-body-sm text-secondary">Decisions made right here in Lilongwe and Blantyre.</span>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
+<div>
+<span class="font-label-md text-on-surface block">Regulatory Compliance</span>
+<span class="text-body-sm text-secondary">Fully licensed and supervised by the Reserve Bank of Malawi.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Financial Solutions -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-md text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Our Financial Solutions</h2>
+<p class="text-body-md text-secondary max-w-2xl mx-auto">Explore our range of credit and advisory services designed to meet your specific needs.</p>
+</div>
+<div class="max-w-container-max mx-auto px-md grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Solution 1 -->
+<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
+<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="local_atm">local_atm</span>
+<h3 class="font-headline-sm text-headline-sm mb-sm">Salary-Based Loans</h3>
+<p class="text-body-sm text-secondary mb-md">Fast personal loans for civil servants and private sector employees with competitive interest rates.</p>
+<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+</div>
+<!-- Solution 2 -->
+<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
+<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="bolt">bolt</span>
+<h3 class="font-headline-sm text-headline-sm mb-sm">Emergency Loans</h3>
+<p class="text-body-sm text-secondary mb-md">24-hour turnaround for unexpected medical bills, repairs, or urgent family matters.</p>
+<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+</div>
+<!-- Solution 3 -->
+<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
+<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="business_center">business_center</span>
+<h3 class="font-headline-sm text-headline-sm mb-sm">SME Financing</h3>
+<p class="text-body-sm text-secondary mb-md">Flexible working capital and growth capital for small to medium-sized enterprises.</p>
+<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+</div>
+<!-- Solution 4 -->
+<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
+<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="directions_car">directions_car</span>
+<h3 class="font-headline-sm text-headline-sm mb-sm">Asset Financing</h3>
+<p class="text-body-sm text-secondary mb-md">Get the vehicles or equipment your business needs to expand with manageable payment plans.</p>
+<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+</div>
+<!-- Solution 5 -->
+<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
+<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="account_balance_wallet">account_balance_wallet</span>
+<h3 class="font-headline-sm text-headline-sm mb-sm">Financial Advisory</h3>
+<p class="text-body-sm text-secondary mb-md">Personalised consulting to help you manage debt, save effectively, and invest for the future.</p>
+<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+</div>
+<!-- Solution 6 -->
+<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition relative">
+<span class="absolute top-4 right-4 bg-surface-container-high text-on-surface-variant text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Coming Soon</span>
+<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="smartphone">smartphone</span>
+<h3 class="font-headline-sm text-headline-sm mb-sm">Digital Banking</h3>
+<p class="text-body-sm text-secondary mb-md">Manage your accounts, check balances, and apply for credit directly from your mobile device.</p>
+<a class="text-primary font-label-md flex items-center gap-1 opacity-50 cursor-not-allowed" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
+</div>
+</div>
+</section>
+<!-- Application Steps -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-md">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Simple 4-Step Application</h2>
+<p class="text-body-md text-secondary">We've streamlined our process to ensure you get the funds you need without the headache.</p>
+</div>
+<div class="relative">
+<!-- Connector Line -->
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant -translate-y-1/2 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg relative">
+<!-- Step 1 -->
+<div class="text-center space-y-sm bg-surface md:bg-transparent px-4">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm mx-auto relative z-10 border-4 border-surface shadow-md">01</div>
+<h4 class="font-headline-sm text-headline-sm">Apply Online</h4>
+<p class="text-body-sm text-secondary">Complete our simple 5-minute application form with basic details.</p>
+</div>
+<!-- Step 2 -->
+<div class="text-center space-y-sm bg-surface md:bg-transparent px-4">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm mx-auto relative z-10 border-4 border-surface shadow-md">02</div>
+<h4 class="font-headline-sm text-headline-sm">Verification</h4>
+<p class="text-body-sm text-secondary">Our team reviews your documents and credit profile swiftly.</p>
+</div>
+<!-- Step 3 -->
+<div class="text-center space-y-sm bg-surface md:bg-transparent px-4">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm mx-auto relative z-10 border-4 border-surface shadow-md">03</div>
+<h4 class="font-headline-sm text-headline-sm">Approval</h4>
+<p class="text-body-sm text-secondary">Receive an offer with clear terms and competitive interest rates.</p>
+</div>
+<!-- Step 4 -->
+<div class="text-center space-y-sm bg-surface md:bg-transparent px-4">
+<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm mx-auto relative z-10 border-4 border-surface shadow-md">04</div>
+<h4 class="font-headline-sm text-headline-sm">Disbursement</h4>
+<p class="text-body-sm text-secondary">Funds are transferred directly to your bank account within 24 hours.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Props -->
+<section class="py-xl bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-md text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Why Choose Times Capital?</h2>
+</div>
+<div class="max-w-container-max mx-auto px-md space-y-xl">
+<!-- Trust & Security -->
+<div class="grid md:grid-cols-2 gap-xl items-center">
+<div class="order-2 md:order-1 space-y-md">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="security">security</span>
+<h3 class="font-headline-md text-headline-md">Trust &amp; Security</h3>
+<p class="text-body-md text-secondary">We prioritise the safety of your data and the integrity of our financial practices. As a regulated institution, your peace of mind is our top priority.</p>
+<div class="grid grid-cols-1 gap-sm">
+<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> Transparent Conditions</div>
+<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> No Hidden Fees</div>
+<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> Competitive Rates</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<img alt="Security Consultation" class="w-full h-auto rounded-xl shadow-lg border border-white" src="assets/people3.jpg"/>
+</div>
+</div>
+<!-- Speed & Efficiency -->
+<div class="grid md:grid-cols-2 gap-xl items-center">
+<div>
+<img alt="Efficient Service" class="w-full h-auto rounded-xl shadow-lg border border-white" src="assets/people4.jpg"/>
+</div>
+<div class="space-y-md">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="speed">speed</span>
+<h3 class="font-headline-md text-headline-md">Speed &amp; Efficiency</h3>
+<p class="text-body-md text-secondary">Financial needs don't wait. Our digital-first approach allows us to process applications and disburse funds faster than traditional banks.</p>
+<div class="grid grid-cols-1 gap-sm">
+<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> Rapid Disbursement</div>
+<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> Digital Approval</div>
+<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> 24/7 Support</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl bg-surface">
+<div class="max-w-container-max mx-auto px-md text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Voices of Our Customers</h2>
+</div>
+<div class="max-w-container-max mx-auto px-md grid md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-white p-lg rounded-xl financial-shadow relative">
+<span class="material-symbols-outlined text-primary-fixed-dim absolute top-4 right-4 text-4xl opacity-30" data-icon="format_quote">format_quote</span>
+<p class="text-body-md text-secondary italic mb-lg">"The salary loan process was incredibly smooth. I managed to pay my daughter's university fees just in time. Truly a life saver!"</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Josephine Banda" class="w-full h-full object-cover" src="assets/person1.jpg"/>
+</div>
+<div>
+<div class="font-label-md text-on-surface">Josephine Banda</div>
+<div class="text-label-sm text-secondary">Civil Servant, Lilongwe</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-lg rounded-xl financial-shadow relative">
+<span class="material-symbols-outlined text-primary-fixed-dim absolute top-4 right-4 text-4xl opacity-30" data-icon="format_quote">format_quote</span>
+<p class="text-body-md text-secondary italic mb-lg">"As a small business owner, finding a bank that understands the local market is hard. Times Capital believed in my vision."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Limbani Phiri" class="w-full h-full object-cover" src="assets/people2.jpg"/>
+</div>
+<div>
+<div class="font-label-md text-on-surface">Limbani Phiri</div>
+<div class="text-label-sm text-secondary">Entrepreneur, Blantyre</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-lg rounded-xl financial-shadow relative">
+<span class="material-symbols-outlined text-primary-fixed-dim absolute top-4 right-4 text-4xl opacity-30" data-icon="format_quote">format_quote</span>
+<p class="text-body-md text-secondary italic mb-lg">"Transparent, professional, and helpful. No hidden fees or surprises. Their financial advisory also helped me plan my savings better."</p>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="Grace Mwale" class="w-full h-full object-cover" src="assets/people3.jpg"/>
+</div>
+<div>
+<div class="font-label-md text-on-surface">Grace Mwale</div>
+<div class="text-label-sm text-secondary">Nurse, Zomba</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-md grid md:grid-cols-2 gap-xl">
+<div class="space-y-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Get in Touch</h2>
+<p class="text-body-md text-secondary">Have questions? Our support team is here to assist you with any inquiries about our services.</p>
+</div>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+</div>
+<div>
+<div class="text-label-sm text-secondary uppercase font-bold tracking-widest">Phone</div>
+<div class="font-label-md text-on-surface">+265 881 234 567</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+</div>
+<div>
+<div class="text-label-sm text-secondary uppercase font-bold tracking-widest">Email</div>
+<div class="font-label-md text-on-surface">support@timescapital.mw</div>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<div class="text-label-sm text-secondary uppercase font-bold tracking-widest">Address</div>
+<div class="font-label-md text-on-surface">Times Offices, Chilambula Road, Lilongwe</div>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden financial-shadow h-[400px]">
+<!-- Map Placeholder -->
+<div class="w-full h-full bg-surface-container-high flex flex-col items-center justify-center relative overflow-hidden">
+<img alt="Map of Lilongwe" class="absolute inset-0 w-full h-full object-cover grayscale opacity-50" src="assets/Rectangle%20188.jpg"/>
+<div class="relative z-10 p-md bg-white/90 backdrop-blur-sm rounded-lg border border-primary/20 shadow-xl text-center">
+<span class="material-symbols-outlined text-primary text-4xl block mb-2" data-icon="location_pin">location_pin</span>
+<span class="font-label-md block">Times Capital Finance HQ</span>
+<span class="text-body-sm text-secondary">Lilongwe, Malawi</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xl bg-surface">
+<div class="max-w-3xl mx-auto px-md">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-sm">
+<!-- Accordion Item 1 -->
+<details class="group bg-white rounded-xl financial-shadow overflow-hidden" open="">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<span class="font-label-md text-on-surface">What are the eligibility requirements for a loan?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-md pb-md text-body-sm text-secondary border-t border-surface-container">
+                            Eligibility depends on the loan type. Generally, you need to be a Malawian resident, 18+ years old, and have a steady source of income (salary or business). Specific documents like National ID and proof of income will be required.
+                        </div>
+</details>
+<!-- Accordion Item 2 -->
+<details class="group bg-white rounded-xl financial-shadow overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<span class="font-label-md text-on-surface">How long does the approval process take?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-md pb-md text-body-sm text-secondary border-t border-surface-container">
+                            Most applications are reviewed within 24 hours. Once approved, funds are typically disbursed to your account on the same day or the next business day.
+                        </div>
+</details>
+<!-- Accordion Item 3 -->
+<details class="group bg-white rounded-xl financial-shadow overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<span class="font-label-md text-on-surface">Are there any hidden fees?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-md pb-md text-body-sm text-secondary border-t border-surface-container">
+                            No. We pride ourselves on transparency. All interest rates, processing fees, and repayment terms are clearly outlined in your loan agreement before you sign.
+                        </div>
+</details>
+<!-- Accordion Item 4 -->
+<details class="group bg-white rounded-xl financial-shadow overflow-hidden">
+<summary class="flex justify-between items-center p-md cursor-pointer list-none">
+<span class="font-label-md text-on-surface">Can I settle my loan early?</span>
+<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-md pb-md text-body-sm text-secondary border-t border-surface-container">
+                            Yes, you can settle your loan early. We encourage responsible financial management and do not penalize for early repayment on most of our products.
+                        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xl">
+<div class="max-w-container-max mx-auto px-md">
+<div class="bg-primary rounded-[2rem] p-lg md:p-xl text-center text-on-primary relative overflow-hidden">
+<!-- Atmospheric Background Element -->
+<div class="absolute -top-1/2 -left-1/4 w-full h-full bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 space-y-md">
+<h2 class="font-headline-lg text-headline-lg max-w-2xl mx-auto">Ready to Take Your Next Financial Step?</h2>
+<p class="text-body-lg opacity-90 max-w-xl mx-auto">Join 15,000+ Malawians who trust Times Capital for their financial needs. Apply today and get approved in hours.</p>
+<div class="flex flex-wrap justify-center gap-md pt-sm">
+<button class="bg-white text-primary px-lg py-sm rounded-full font-label-md hover:bg-surface-bright active:scale-95 smooth-transition shadow-lg">
+                                Download Forms
+                            </button>
+<button class="border border-white/40 text-white px-lg py-sm rounded-full font-label-md hover:bg-white/10 active:scale-95 smooth-transition">
+                                Talk to Expert
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant py-xl">
+<div class="max-w-container-max mx-auto px-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl">
+<div class="space-y-md">
+<a class="inline-flex items-center" href="#" aria-label="Times Capital Finance Home">
+<img alt="Times Capital Finance logo" class="h-12 w-auto" src="assets/logo.svg"/>
+</a>
+<p class="text-body-sm text-secondary">Your trusted financial partner in Malawi. Licensed and regulated by the Reserve Bank of Malawi.</p>
+<div class="flex gap-sm">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="link">link</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-md">Services</h4>
+<ul class="space-y-sm">
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Salary Loans</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Business Capital</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Emergency Funds</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Asset Financing</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Loan Calculator</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-md">Company</h4>
+<ul class="space-y-sm">
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">News &amp; Press</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-md">Support</h4>
+<ul class="space-y-sm">
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-lg border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="text-label-sm text-secondary text-center md:text-left">
+                    © 2026 Times Capital Finance Limited. All rights reserved. <br/>
+                    Reserve Bank License No: TC-044-2014
+                </div>
+<div class="text-label-sm text-secondary flex gap-md">
+<span>Malawi</span>
+<span>English</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth reveal on scroll interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                    }
+                });
+            }, observerOptions);
+
+            // Add smooth reveal classes to sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>
