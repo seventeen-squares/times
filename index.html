@@ -102,13 +102,7 @@
       }
 
       .timeline-line {
-        background: repeating-linear-gradient(
-          90deg,
-          var(--brand) 0,
-          var(--brand) 10px,
-          transparent 10px,
-          transparent 16px
-        );
+        background: url("assets/steps.png") repeat-x center/contain;
       }
 
       .pattern-red {
@@ -280,12 +274,22 @@
         <div class="soft-panel p-6 md:p-9">
           <h2 class="text-3xl font-extrabold text-center">Simple 4-Step Application</h2>
           <p class="text-[var(--muted)] text-center mt-2">We’ve streamlined our process to ensure you get the funds you need quickly.</p>
-          <div class="hidden md:block mt-8 h-1 timeline-line"></div>
-          <div class="mt-6 grid md:grid-cols-4 gap-5 text-center">
-            <div data-reveal="up" data-delay="1"><div class="mx-auto h-10 w-10 rounded-full bg-[var(--brand)] text-white text-sm font-bold flex items-center justify-center">01</div><h3 class="font-semibold mt-3">Apply Online</h3><p class="text-xs text-[var(--muted)] mt-1">Complete the form.</p></div>
-            <div data-reveal="up" data-delay="2"><div class="mx-auto h-10 w-10 rounded-full bg-[var(--brand)] text-white text-sm font-bold flex items-center justify-center">02</div><h3 class="font-semibold mt-3">Verification</h3><p class="text-xs text-[var(--muted)] mt-1">Documents are checked.</p></div>
-            <div data-reveal="up" data-delay="3"><div class="mx-auto h-10 w-10 rounded-full bg-[var(--brand)] text-white text-sm font-bold flex items-center justify-center">03</div><h3 class="font-semibold mt-3">Approval</h3><p class="text-xs text-[var(--muted)] mt-1">Get clear terms fast.</p></div>
-            <div data-reveal="up" data-delay="4"><div class="mx-auto h-10 w-10 rounded-full bg-[var(--brand)] text-white text-sm font-bold flex items-center justify-center">04</div><h3 class="font-semibold mt-3">Disbursement</h3><p class="text-xs text-[var(--muted)] mt-1">Funds sent to account.</p></div>
+          <!-- Desktop: line pinned to circle center (h-16 = 64px, center = 32px) -->
+          <div class="hidden md:block mt-10 relative">
+            <div class="absolute left-0 right-0 h-1 timeline-line" style="top:32px;"></div>
+            <div class="grid grid-cols-4 gap-5 text-center relative">
+              <div data-reveal="up" data-delay="1"><div class="mx-auto h-16 w-16 rounded-full bg-[var(--brand)] text-white font-bold flex items-center justify-center relative z-10 shadow-md">01</div><h3 class="font-semibold mt-4">Apply Online</h3><p class="text-xs text-[var(--muted)] mt-1">Complete the form.</p></div>
+              <div data-reveal="up" data-delay="2"><div class="mx-auto h-16 w-16 rounded-full bg-[var(--brand)] text-white font-bold flex items-center justify-center relative z-10 shadow-md">02</div><h3 class="font-semibold mt-4">Verification</h3><p class="text-xs text-[var(--muted)] mt-1">Documents are checked.</p></div>
+              <div data-reveal="up" data-delay="3"><div class="mx-auto h-16 w-16 rounded-full bg-[var(--brand)] text-white font-bold flex items-center justify-center relative z-10 shadow-md">03</div><h3 class="font-semibold mt-4">Approval</h3><p class="text-xs text-[var(--muted)] mt-1">Get clear terms fast.</p></div>
+              <div data-reveal="up" data-delay="4"><div class="mx-auto h-16 w-16 rounded-full bg-[var(--brand)] text-white font-bold flex items-center justify-center relative z-10 shadow-md">04</div><h3 class="font-semibold mt-4">Disbursement</h3><p class="text-xs text-[var(--muted)] mt-1">Funds sent to account.</p></div>
+            </div>
+          </div>
+          <!-- Mobile fallback -->
+          <div class="md:hidden mt-6 grid grid-cols-2 gap-5 text-center">
+            <div><div class="mx-auto h-14 w-14 rounded-full bg-[var(--brand)] text-white font-bold flex items-center justify-center shadow-md">01</div><h3 class="font-semibold mt-3">Apply Online</h3><p class="text-xs text-[var(--muted)] mt-1">Complete the form.</p></div>
+            <div><div class="mx-auto h-14 w-14 rounded-full bg-[var(--brand)] text-white font-bold flex items-center justify-center shadow-md">02</div><h3 class="font-semibold mt-3">Verification</h3><p class="text-xs text-[var(--muted)] mt-1">Documents are checked.</p></div>
+            <div><div class="mx-auto h-14 w-14 rounded-full bg-[var(--brand)] text-white font-bold flex items-center justify-center shadow-md">03</div><h3 class="font-semibold mt-3">Approval</h3><p class="text-xs text-[var(--muted)] mt-1">Get clear terms fast.</p></div>
+            <div><div class="mx-auto h-14 w-14 rounded-full bg-[var(--brand)] text-white font-bold flex items-center justify-center shadow-md">04</div><h3 class="font-semibold mt-3">Disbursement</h3><p class="text-xs text-[var(--muted)] mt-1">Funds sent to account.</p></div>
           </div>
         </div>
       </section>
