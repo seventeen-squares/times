@@ -1,624 +1,392 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Times Capital Finance | Finance That Moves Malawi Forward</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "on-error-container": "#93000a",
-                "inverse-primary": "#ffb4ab",
-                "on-surface": "#1c1b1b",
-                "on-secondary-container": "#65645f",
-                "error-container": "#ffdad6",
-                "surface-container-lowest": "#ffffff",
-                "surface-container-low": "#f6f3f2",
-                "surface-tint": "#bc1319",
-                "secondary": "#5f5e59",
-                "on-primary": "#ffffff",
-                "surface-variant": "#e5e2e1",
-                "secondary-fixed-dim": "#c9c6c0",
-                "surface-dim": "#dcd9d9",
-                "inverse-surface": "#313030",
-                "surface-bright": "#fcf9f8",
-                "on-secondary": "#ffffff",
-                "secondary-container": "#e5e2db",
-                "on-surface-variant": "#5c403d",
-                "primary-fixed-dim": "#ffb4ab",
-                "tertiary-fixed": "#86fd62",
-                "surface": "#fcf9f8",
-                "tertiary": "#166300",
-                "on-primary-container": "#ffeeeb",
-                "inverse-on-surface": "#f3f0ef",
-                "primary-fixed": "#ffdad6",
-                "outline-variant": "#e5bdb9",
-                "surface-container-high": "#eae7e7",
-                "on-primary-fixed": "#410002",
-                "on-primary-fixed-variant": "#93000c",
-                "on-tertiary-fixed-variant": "#105300",
-                "on-tertiary-container": "#ceffb7",
-                "secondary-fixed": "#e5e2db",
-                "background": "#fcf9f8",
-                "tertiary-container": "#1e7f00",
-                "on-tertiary-fixed": "#032100",
-                "on-tertiary": "#ffffff",
-                "primary": "#af0211",
-                "outline": "#906f6b",
-                "surface-container-highest": "#e5e2e1",
-                "error": "#ba1a1a",
-                "on-secondary-fixed": "#1c1c18",
-                "on-error": "#ffffff",
-                "surface-container": "#f0eded",
-                "on-secondary-fixed-variant": "#474742",
-                "tertiary-fixed-dim": "#6ae049",
-                "primary-container": "#d32827",
-                "on-background": "#1c1b1b"
-            },
-            "borderRadius": {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-            },
-            "spacing": {
-                "md": "24px",
-                "lg": "48px",
-                "gutter": "24px",
-                "sm": "12px",
-                "xs": "4px",
-                "xl": "80px",
-                "container-max": "1200px",
-                "base": "8px"
-            },
-            "fontFamily": {
-                "headline-lg-mobile": ["Newsreader"],
-                "headline-xl": ["Newsreader"],
-                "headline-sm": ["Newsreader"],
-                "body-sm": ["Manrope"],
-                "headline-lg": ["Newsreader"],
-                "body-lg": ["Manrope"],
-                "label-sm": ["Manrope"],
-                "label-md": ["Manrope"],
-                "headline-md": ["Newsreader"],
-                "body-md": ["Manrope"]
-            },
-            "fontSize": {
-                "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
-                "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
-                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
-                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                "label-sm": ["12px", {"lineHeight": "14px", "fontWeight": "500"}],
-                "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
-                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
-            }
-          },
-        },
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Times Capital Finance | Financing the Hands That Build Malawi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --brand: #aa1a1f;
+        --brand-dark: #7d1115;
+        --text: #141414;
+        --muted: #6f6f6f;
+        --line: #ececec;
+        --panel: #f7f7f7;
       }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .financial-shadow {
-            box-shadow: 0px 4px 20px rgba(26, 26, 26, 0.06);
-        }
-        .hero-bg {
-            background-color: #F5F2EB;
-        }
-        .smooth-transition {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-    </style>
-</head>
-<body class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- Top Navigation -->
-<header class="bg-surface sticky top-0 z-50 w-full">
-<div class="flex justify-between items-center w-full px-md py-sm max-w-container-max mx-auto">
-<a class="flex items-center" href="#" aria-label="Times Capital Finance Home">
-<img alt="Times Capital Finance logo" class="h-12 w-auto" src="assets/logo.svg"/>
-</a>
-<nav class="hidden md:flex gap-lg items-center">
-<a class="text-label-md font-label-md text-primary border-b-2 border-primary pb-1" href="#">About</a>
-<a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#">Personal Loans</a>
-<a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#">Business Solutions</a>
-<a class="text-label-md font-label-md text-on-surface hover:text-primary transition-colors" href="#">Contact Us</a>
-</nav>
-<div class="flex gap-sm items-center">
-<button class="hidden md:block text-label-md font-label-md text-on-surface px-md py-sm hover:text-primary transition-colors">Login</button>
-<button class="bg-primary text-on-primary text-label-md font-label-md px-md py-sm rounded-full active:scale-95 transition-all shadow-md">Get Started</button>
-</div>
-</div>
-</header>
-<main>
-<!-- Hero Section -->
-<section class="hero-bg py-xl overflow-hidden">
-<div class="max-w-container-max mx-auto px-md grid md:grid-cols-2 gap-lg items-center">
-<div class="space-y-md">
-<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight">
-                        Finance That Moves <br/>
-<span class="text-primary">Malawi</span> Forward
-                    </h1>
-<p class="text-body-lg font-body-lg text-secondary max-w-lg">
-                        Tailored financial solutions for civil servants, entrepreneurs, and families. Fast approval, competitive rates, and a partner who understands your journey.
-                    </p>
-<div class="flex flex-wrap gap-md pt-sm">
-<button class="bg-primary text-on-primary px-lg py-sm rounded-full flex items-center gap-2 font-label-md active:scale-95 smooth-transition shadow-lg">
-                            Apply For a Loan
-                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</button>
-<button class="border border-outline text-on-surface px-lg py-sm rounded-full font-label-md hover:bg-surface-container-low active:scale-95 smooth-transition">
-                            Contact Us
-                        </button>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-fixed-dim rounded-full opacity-20 blur-3xl"></div>
-<img alt="Times Capital Finance Professional" class="w-full h-auto rounded-xl financial-shadow relative z-10 border-8 border-white" src="assets/person1.jpg"/>
-</div>
-</div>
-</section>
-<!-- Stats Bar -->
-<section class="bg-surface relative -mt-12 z-20">
-<div class="max-w-container-max mx-auto px-md">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter bg-white p-lg rounded-xl financial-shadow">
-<div class="text-center space-y-2">
-<span class="material-symbols-outlined text-primary text-3xl" data-icon="payments">payments</span>
-<div class="font-headline-md text-headline-md text-on-surface">MWK 5B+</div>
-<div class="text-label-md text-secondary">Loans Issued</div>
-</div>
-<div class="text-center space-y-2">
-<span class="material-symbols-outlined text-primary text-3xl" data-icon="groups">groups</span>
-<div class="font-headline-md text-headline-md text-on-surface">15,000+</div>
-<div class="text-label-md text-secondary">Customers Served</div>
-</div>
-<div class="text-center space-y-2">
-<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
-<div class="font-headline-md text-headline-md text-on-surface">98%</div>
-<div class="text-label-md text-secondary">Client Satisfaction</div>
-</div>
-<div class="text-center space-y-2">
-<span class="material-symbols-outlined text-primary text-3xl" data-icon="schedule">schedule</span>
-<div class="font-headline-md text-headline-md text-on-surface">10+</div>
-<div class="text-label-md text-secondary">Months of Service</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Partner Info / Mission & Vision -->
-<section class="py-xl bg-surface">
-<div class="max-w-container-max mx-auto px-md">
-<div class="grid md:grid-cols-2 gap-xl items-center">
-<div class="grid grid-cols-2 gap-md">
-<div class="col-span-2 relative">
-<img alt="Team Consultation" class="w-full h-48 object-cover rounded-xl shadow-md" src="assets/people2.jpg"/>
-</div>
-<div class="bg-primary p-md rounded-xl text-on-primary space-y-2">
-<h3 class="font-headline-sm text-headline-sm">Our Mission</h3>
-<p class="text-body-sm">To provide accessible, ethical, and innovative financial services that foster economic growth and improve Malawian livelihoods.</p>
-</div>
-<div class="bg-surface-container p-md rounded-xl space-y-2">
-<h3 class="font-headline-sm text-headline-sm text-on-surface">Our Vision</h3>
-<p class="text-body-sm text-secondary">To be the leading financial catalyst for a prosperous and financially inclusive Malawi.</p>
-</div>
-</div>
-<div class="space-y-md">
-<span class="bg-primary-fixed text-on-primary-fixed px-sm py-1 rounded-full text-label-sm">Trusted since 2025</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Your Partner in Financial Growth &amp; Stability</h2>
-<p class="text-body-md text-secondary">Times Capital Finance is more than just a lender. We are a locally-rooted institution dedicated to understanding the unique financial landscape of Malawi. We believe that everyone deserves the chance to pursue their dreams, whether it's educating their children, growing a business, or securing their family's future.</p>
-<ul class="space-y-sm">
-<li class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
-<div>
-<span class="font-label-md text-on-surface block">Locally Managed &amp; Owned</span>
-<span class="text-body-sm text-secondary">Decisions made right here in Lilongwe and Blantyre.</span>
-</div>
-</li>
-<li class="flex items-start gap-sm">
-<span class="material-symbols-outlined text-tertiary-container mt-1" data-icon="check_circle">check_circle</span>
-<div>
-<span class="font-label-md text-on-surface block">Regulatory Compliance</span>
-<span class="text-body-sm text-secondary">Fully licensed and supervised by the Reserve Bank of Malawi.</span>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- Financial Solutions -->
-<section class="py-xl bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-md text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Our Financial Solutions</h2>
-<p class="text-body-md text-secondary max-w-2xl mx-auto">Explore our range of credit and advisory services designed to meet your specific needs.</p>
-</div>
-<div class="max-w-container-max mx-auto px-md grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Solution 1 -->
-<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
-<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="local_atm">local_atm</span>
-<h3 class="font-headline-sm text-headline-sm mb-sm">Salary-Based Loans</h3>
-<p class="text-body-sm text-secondary mb-md">Fast personal loans for civil servants and private sector employees with competitive interest rates.</p>
-<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
-</div>
-<!-- Solution 2 -->
-<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
-<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="bolt">bolt</span>
-<h3 class="font-headline-sm text-headline-sm mb-sm">Emergency Loans</h3>
-<p class="text-body-sm text-secondary mb-md">24-hour turnaround for unexpected medical bills, repairs, or urgent family matters.</p>
-<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
-</div>
-<!-- Solution 3 -->
-<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
-<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="business_center">business_center</span>
-<h3 class="font-headline-sm text-headline-sm mb-sm">SME Financing</h3>
-<p class="text-body-sm text-secondary mb-md">Flexible working capital and growth capital for small to medium-sized enterprises.</p>
-<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
-</div>
-<!-- Solution 4 -->
-<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
-<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="directions_car">directions_car</span>
-<h3 class="font-headline-sm text-headline-sm mb-sm">Asset Financing</h3>
-<p class="text-body-sm text-secondary mb-md">Get the vehicles or equipment your business needs to expand with manageable payment plans.</p>
-<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
-</div>
-<!-- Solution 5 -->
-<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition">
-<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="account_balance_wallet">account_balance_wallet</span>
-<h3 class="font-headline-sm text-headline-sm mb-sm">Financial Advisory</h3>
-<p class="text-body-sm text-secondary mb-md">Personalised consulting to help you manage debt, save effectively, and invest for the future.</p>
-<a class="text-primary font-label-md flex items-center gap-1 hover:underline" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
-</div>
-<!-- Solution 6 -->
-<div class="bg-white p-lg rounded-xl financial-shadow group hover:-translate-y-1 smooth-transition relative">
-<span class="absolute top-4 right-4 bg-surface-container-high text-on-surface-variant text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Coming Soon</span>
-<span class="material-symbols-outlined text-primary text-4xl mb-md block" data-icon="smartphone">smartphone</span>
-<h3 class="font-headline-sm text-headline-sm mb-sm">Digital Banking</h3>
-<p class="text-body-sm text-secondary mb-md">Manage your accounts, check balances, and apply for credit directly from your mobile device.</p>
-<a class="text-primary font-label-md flex items-center gap-1 opacity-50 cursor-not-allowed" href="#">Learn More <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></a>
-</div>
-</div>
-</section>
-<!-- Application Steps -->
-<section class="py-xl bg-surface">
-<div class="max-w-container-max mx-auto px-md">
-<div class="text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Simple 4-Step Application</h2>
-<p class="text-body-md text-secondary">We've streamlined our process to ensure you get the funds you need without the headache.</p>
-</div>
-<div class="relative">
-<!-- Connector Line -->
-<div class="absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant -translate-y-1/2 hidden md:block"></div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg relative">
-<!-- Step 1 -->
-<div class="text-center space-y-sm bg-surface md:bg-transparent px-4">
-<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm mx-auto relative z-10 border-4 border-surface shadow-md">01</div>
-<h4 class="font-headline-sm text-headline-sm">Apply Online</h4>
-<p class="text-body-sm text-secondary">Complete our simple 5-minute application form with basic details.</p>
-</div>
-<!-- Step 2 -->
-<div class="text-center space-y-sm bg-surface md:bg-transparent px-4">
-<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm mx-auto relative z-10 border-4 border-surface shadow-md">02</div>
-<h4 class="font-headline-sm text-headline-sm">Verification</h4>
-<p class="text-body-sm text-secondary">Our team reviews your documents and credit profile swiftly.</p>
-</div>
-<!-- Step 3 -->
-<div class="text-center space-y-sm bg-surface md:bg-transparent px-4">
-<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm mx-auto relative z-10 border-4 border-surface shadow-md">03</div>
-<h4 class="font-headline-sm text-headline-sm">Approval</h4>
-<p class="text-body-sm text-secondary">Receive an offer with clear terms and competitive interest rates.</p>
-</div>
-<!-- Step 4 -->
-<div class="text-center space-y-sm bg-surface md:bg-transparent px-4">
-<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm mx-auto relative z-10 border-4 border-surface shadow-md">04</div>
-<h4 class="font-headline-sm text-headline-sm">Disbursement</h4>
-<p class="text-body-sm text-secondary">Funds are transferred directly to your bank account within 24 hours.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Value Props -->
-<section class="py-xl bg-surface-container-low">
-<div class="max-w-container-max mx-auto px-md text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Why Choose Times Capital?</h2>
-</div>
-<div class="max-w-container-max mx-auto px-md space-y-xl">
-<!-- Trust & Security -->
-<div class="grid md:grid-cols-2 gap-xl items-center">
-<div class="order-2 md:order-1 space-y-md">
-<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="security">security</span>
-<h3 class="font-headline-md text-headline-md">Trust &amp; Security</h3>
-<p class="text-body-md text-secondary">We prioritise the safety of your data and the integrity of our financial practices. As a regulated institution, your peace of mind is our top priority.</p>
-<div class="grid grid-cols-1 gap-sm">
-<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> Transparent Conditions</div>
-<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> No Hidden Fees</div>
-<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> Competitive Rates</div>
-</div>
-</div>
-<div class="order-1 md:order-2">
-<img alt="Security Consultation" class="w-full h-auto rounded-xl shadow-lg border border-white" src="assets/people3.jpg"/>
-</div>
-</div>
-<!-- Speed & Efficiency -->
-<div class="grid md:grid-cols-2 gap-xl items-center">
-<div>
-<img alt="Efficient Service" class="w-full h-auto rounded-xl shadow-lg border border-white" src="assets/people4.jpg"/>
-</div>
-<div class="space-y-md">
-<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="speed">speed</span>
-<h3 class="font-headline-md text-headline-md">Speed &amp; Efficiency</h3>
-<p class="text-body-md text-secondary">Financial needs don't wait. Our digital-first approach allows us to process applications and disburse funds faster than traditional banks.</p>
-<div class="grid grid-cols-1 gap-sm">
-<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> Rapid Disbursement</div>
-<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> Digital Approval</div>
-<div class="flex items-center gap-2 text-label-md"><span class="material-symbols-outlined text-tertiary-container text-xl" data-icon="check_circle">check_circle</span> 24/7 Support</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials -->
-<section class="py-xl bg-surface">
-<div class="max-w-container-max mx-auto px-md text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Voices of Our Customers</h2>
-</div>
-<div class="max-w-container-max mx-auto px-md grid md:grid-cols-3 gap-gutter">
-<!-- Testimonial 1 -->
-<div class="bg-white p-lg rounded-xl financial-shadow relative">
-<span class="material-symbols-outlined text-primary-fixed-dim absolute top-4 right-4 text-4xl opacity-30" data-icon="format_quote">format_quote</span>
-<p class="text-body-md text-secondary italic mb-lg">"The salary loan process was incredibly smooth. I managed to pay my daughter's university fees just in time. Truly a life saver!"</p>
-<div class="flex items-center gap-md">
-<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
-<img alt="Josephine Banda" class="w-full h-full object-cover" src="assets/person1.jpg"/>
-</div>
-<div>
-<div class="font-label-md text-on-surface">Josephine Banda</div>
-<div class="text-label-sm text-secondary">Civil Servant, Lilongwe</div>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="bg-white p-lg rounded-xl financial-shadow relative">
-<span class="material-symbols-outlined text-primary-fixed-dim absolute top-4 right-4 text-4xl opacity-30" data-icon="format_quote">format_quote</span>
-<p class="text-body-md text-secondary italic mb-lg">"As a small business owner, finding a bank that understands the local market is hard. Times Capital believed in my vision."</p>
-<div class="flex items-center gap-md">
-<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
-<img alt="Limbani Phiri" class="w-full h-full object-cover" src="assets/people2.jpg"/>
-</div>
-<div>
-<div class="font-label-md text-on-surface">Limbani Phiri</div>
-<div class="text-label-sm text-secondary">Entrepreneur, Blantyre</div>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="bg-white p-lg rounded-xl financial-shadow relative">
-<span class="material-symbols-outlined text-primary-fixed-dim absolute top-4 right-4 text-4xl opacity-30" data-icon="format_quote">format_quote</span>
-<p class="text-body-md text-secondary italic mb-lg">"Transparent, professional, and helpful. No hidden fees or surprises. Their financial advisory also helped me plan my savings better."</p>
-<div class="flex items-center gap-md">
-<div class="w-12 h-12 rounded-full bg-surface-container-high overflow-hidden">
-<img alt="Grace Mwale" class="w-full h-full object-cover" src="assets/people3.jpg"/>
-</div>
-<div>
-<div class="font-label-md text-on-surface">Grace Mwale</div>
-<div class="text-label-sm text-secondary">Nurse, Zomba</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Section -->
-<section class="py-xl bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-md grid md:grid-cols-2 gap-xl">
-<div class="space-y-lg">
-<div>
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Get in Touch</h2>
-<p class="text-body-md text-secondary">Have questions? Our support team is here to assist you with any inquiries about our services.</p>
-</div>
-<div class="space-y-md">
-<div class="flex items-center gap-md">
-<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
-<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
-</div>
-<div>
-<div class="text-label-sm text-secondary uppercase font-bold tracking-widest">Phone</div>
-<div class="font-label-md text-on-surface">+265 881 234 567</div>
-</div>
-</div>
-<div class="flex items-center gap-md">
-<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
-<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-</div>
-<div>
-<div class="text-label-sm text-secondary uppercase font-bold tracking-widest">Email</div>
-<div class="font-label-md text-on-surface">support@timescapital.mw</div>
-</div>
-</div>
-<div class="flex items-center gap-md">
-<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
-<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
-</div>
-<div>
-<div class="text-label-sm text-secondary uppercase font-bold tracking-widest">Address</div>
-<div class="font-label-md text-on-surface">Times Offices, Chilambula Road, Lilongwe</div>
-</div>
-</div>
-</div>
-</div>
-<div class="rounded-xl overflow-hidden financial-shadow h-[400px]">
-<!-- Map Placeholder -->
-<div class="w-full h-full bg-surface-container-high flex flex-col items-center justify-center relative overflow-hidden">
-<img alt="Map of Lilongwe" class="absolute inset-0 w-full h-full object-cover grayscale opacity-50" src="assets/Rectangle%20188.jpg"/>
-<div class="relative z-10 p-md bg-white/90 backdrop-blur-sm rounded-lg border border-primary/20 shadow-xl text-center">
-<span class="material-symbols-outlined text-primary text-4xl block mb-2" data-icon="location_pin">location_pin</span>
-<span class="font-label-md block">Times Capital Finance HQ</span>
-<span class="text-body-sm text-secondary">Lilongwe, Malawi</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ Section -->
-<section class="py-xl bg-surface">
-<div class="max-w-3xl mx-auto px-md">
-<div class="text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Frequently Asked Questions</h2>
-</div>
-<div class="space-y-sm">
-<!-- Accordion Item 1 -->
-<details class="group bg-white rounded-xl financial-shadow overflow-hidden" open="">
-<summary class="flex justify-between items-center p-md cursor-pointer list-none">
-<span class="font-label-md text-on-surface">What are the eligibility requirements for a loan?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="px-md pb-md text-body-sm text-secondary border-t border-surface-container">
-                            Eligibility depends on the loan type. Generally, you need to be a Malawian resident, 18+ years old, and have a steady source of income (salary or business). Specific documents like National ID and proof of income will be required.
-                        </div>
-</details>
-<!-- Accordion Item 2 -->
-<details class="group bg-white rounded-xl financial-shadow overflow-hidden">
-<summary class="flex justify-between items-center p-md cursor-pointer list-none">
-<span class="font-label-md text-on-surface">How long does the approval process take?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="px-md pb-md text-body-sm text-secondary border-t border-surface-container">
-                            Most applications are reviewed within 24 hours. Once approved, funds are typically disbursed to your account on the same day or the next business day.
-                        </div>
-</details>
-<!-- Accordion Item 3 -->
-<details class="group bg-white rounded-xl financial-shadow overflow-hidden">
-<summary class="flex justify-between items-center p-md cursor-pointer list-none">
-<span class="font-label-md text-on-surface">Are there any hidden fees?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="px-md pb-md text-body-sm text-secondary border-t border-surface-container">
-                            No. We pride ourselves on transparency. All interest rates, processing fees, and repayment terms are clearly outlined in your loan agreement before you sign.
-                        </div>
-</details>
-<!-- Accordion Item 4 -->
-<details class="group bg-white rounded-xl financial-shadow overflow-hidden">
-<summary class="flex justify-between items-center p-md cursor-pointer list-none">
-<span class="font-label-md text-on-surface">Can I settle my loan early?</span>
-<span class="material-symbols-outlined group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
-</summary>
-<div class="px-md pb-md text-body-sm text-secondary border-t border-surface-container">
-                            Yes, you can settle your loan early. We encourage responsible financial management and do not penalize for early repayment on most of our products.
-                        </div>
-</details>
-</div>
-</div>
-</section>
-<!-- Final CTA -->
-<section class="py-xl">
-<div class="max-w-container-max mx-auto px-md">
-<div class="bg-primary rounded-[2rem] p-lg md:p-xl text-center text-on-primary relative overflow-hidden">
-<!-- Atmospheric Background Element -->
-<div class="absolute -top-1/2 -left-1/4 w-full h-full bg-white/10 rounded-full blur-3xl"></div>
-<div class="relative z-10 space-y-md">
-<h2 class="font-headline-lg text-headline-lg max-w-2xl mx-auto">Ready to Take Your Next Financial Step?</h2>
-<p class="text-body-lg opacity-90 max-w-xl mx-auto">Join 15,000+ Malawians who trust Times Capital for their financial needs. Apply today and get approved in hours.</p>
-<div class="flex flex-wrap justify-center gap-md pt-sm">
-<button class="bg-white text-primary px-lg py-sm rounded-full font-label-md hover:bg-surface-bright active:scale-95 smooth-transition shadow-lg">
-                                Download Forms
-                            </button>
-<button class="border border-white/40 text-white px-lg py-sm rounded-full font-label-md hover:bg-white/10 active:scale-95 smooth-transition">
-                                Talk to Expert
-                            </button>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant py-xl">
-<div class="max-w-container-max mx-auto px-md">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl">
-<div class="space-y-md">
-<a class="inline-flex items-center" href="#" aria-label="Times Capital Finance Home">
-<img alt="Times Capital Finance logo" class="h-12 w-auto" src="assets/logo.svg"/>
-</a>
-<p class="text-body-sm text-secondary">Your trusted financial partner in Malawi. Licensed and regulated by the Reserve Bank of Malawi.</p>
-<div class="flex gap-sm">
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span></a>
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="link">link</span></a>
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="language">language</span></a>
-</div>
-</div>
-<div>
-<h4 class="font-label-md text-on-surface mb-md">Services</h4>
-<ul class="space-y-sm">
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Salary Loans</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Business Capital</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Emergency Funds</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Asset Financing</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Loan Calculator</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-md text-on-surface mb-md">Company</h4>
-<ul class="space-y-sm">
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">About Us</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Careers</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">News &amp; Press</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Contact</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-md text-on-surface mb-md">Support</h4>
-<ul class="space-y-sm">
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Help Center</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="text-body-sm text-secondary hover:text-primary transition-colors" href="#">Terms of Service</a></li>
-</ul>
-</div>
-</div>
-<div class="pt-lg border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
-<div class="text-label-sm text-secondary text-center md:text-left">
-                    © 2026 Times Capital Finance Limited. All rights reserved. <br/>
-                    Reserve Bank License No: TC-044-2014
-                </div>
-<div class="text-label-sm text-secondary flex gap-md">
-<span>Malawi</span>
-<span>English</span>
-</div>
-</div>
-</div>
-</footer>
-<script>
-        // Smooth reveal on scroll interaction
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.remove('opacity-0', 'translate-y-10');
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                    }
-                });
-            }, observerOptions);
 
-            // Add smooth reveal classes to sections
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000', 'ease-out');
-                observer.observe(section);
-            });
-        });
-    </script>
-</body></html>
+      body {
+        font-family: "Manrope", sans-serif;
+        color: var(--text);
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .site-width {
+        width: min(1120px, calc(100% - 32px));
+        margin-inline: auto;
+      }
+
+      .hero {
+        min-height: 560px;
+        background:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 100%),
+          url("assets/person1.jpg") center top / cover no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: -84px;
+        left: -8%;
+        width: 116%;
+        height: 170px;
+        background: #fff;
+        border-radius: 0 0 50% 50% / 0 0 100% 100%;
+      }
+
+      .glass-nav {
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        background: rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(4px);
+      }
+
+      .section-card {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: #fff;
+      }
+
+      .soft-panel {
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      .icon-chip {
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        border: 1px solid #f2d7d8;
+        background: #fff7f7;
+        color: var(--brand);
+      }
+
+      .timeline-line {
+        background: repeating-linear-gradient(
+          90deg,
+          var(--brand) 0,
+          var(--brand) 10px,
+          transparent 10px,
+          transparent 16px
+        );
+      }
+
+      .pattern-red {
+        background:
+          linear-gradient(0deg, rgba(63, 10, 12, 0.7), rgba(63, 10, 12, 0.7)),
+          repeating-linear-gradient(
+            45deg,
+            #7f1b1f 0,
+            #7f1b1f 18px,
+            #90262a 18px,
+            #90262a 36px
+          );
+      }
+
+      .faq-item[open] summary .chev {
+        transform: rotate(180deg);
+      }
+
+      .faq-item summary {
+        list-style: none;
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <header class="hero text-white">
+      <div class="site-width pt-5 relative z-10">
+        <div class="flex items-center justify-between gap-4">
+          <a href="#" aria-label="Times Capital Finance">
+            <img src="assets/logo.svg" alt="Times Capital Finance" class="h-11 w-auto" />
+          </a>
+          <nav class="hidden lg:flex items-center gap-2 text-sm">
+            <a href="#" class="glass-nav rounded-full px-5 py-2">About</a>
+            <a href="#" class="glass-nav rounded-full px-5 py-2">Personal Loans</a>
+            <a href="#" class="glass-nav rounded-full px-5 py-2">Business Solutions</a>
+            <a href="#" class="glass-nav rounded-full px-5 py-2">Contact Us</a>
+          </nav>
+          <div class="flex items-center gap-2">
+            <button class="hidden sm:inline-flex rounded-full px-4 py-2 text-sm">Login</button>
+            <button class="inline-flex rounded-full px-5 py-2 text-sm bg-[var(--brand)] hover:bg-[var(--brand-dark)] transition">
+              Get started
+            </button>
+          </div>
+        </div>
+
+        <div class="pt-20 pb-44 max-w-xl">
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+            Financing the Hands
+            <br />
+            That Build Malawi.
+          </h1>
+          <p class="mt-4 text-white/85">
+            Dedicated, reliable credit solutions for civil servants, business owners, and families.
+          </p>
+          <div class="mt-7 flex flex-wrap gap-3">
+            <button class="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-semibold hover:bg-[var(--brand-dark)] transition">
+              Apply For Loan
+              <span class="material-symbols-outlined text-base">arrow_forward</span>
+            </button>
+            <button class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100 transition">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pb-16">
+      <section class="site-width -mt-8 relative z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <article class="section-card p-4 text-center">
+            <div class="mx-auto icon-chip flex mb-2"><span class="material-symbols-outlined text-base">wallet</span></div>
+            <p class="text-lg font-extrabold text-[var(--brand)]">MWK 5B+</p>
+            <p class="text-xs text-[var(--muted)]">Loans Issued</p>
+          </article>
+          <article class="section-card p-4 text-center">
+            <div class="mx-auto icon-chip flex mb-2"><span class="material-symbols-outlined text-base">groups</span></div>
+            <p class="text-lg font-extrabold text-[var(--brand)]">15,000+</p>
+            <p class="text-xs text-[var(--muted)]">Customers Served</p>
+          </article>
+          <article class="section-card p-4 text-center">
+            <div class="mx-auto icon-chip flex mb-2"><span class="material-symbols-outlined text-base">verified</span></div>
+            <p class="text-lg font-extrabold text-[var(--brand)]">98%</p>
+            <p class="text-xs text-[var(--muted)]">Client Satisfaction</p>
+          </article>
+          <article class="section-card p-4 text-center">
+            <div class="mx-auto icon-chip flex mb-2"><span class="material-symbols-outlined text-base">public</span></div>
+            <p class="text-lg font-extrabold text-[var(--brand)]">10+</p>
+            <p class="text-xs text-[var(--muted)]">Months of Service</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="site-width mt-14">
+        <div class="soft-panel p-5 md:p-7 grid lg:grid-cols-2 gap-8 items-center">
+          <div class="grid grid-cols-2 gap-4">
+            <img src="assets/people2.jpg" alt="Growing savings" class="rounded-xl h-56 w-full object-cover col-span-2" />
+            <article class="rounded-xl bg-[var(--brand)] text-white p-4">
+              <h3 class="font-bold text-lg">Our Mission</h3>
+              <p class="mt-2 text-sm">To provide accessible, ethical, and innovative financial services that foster economic growth in Malawi.</p>
+            </article>
+            <article class="rounded-xl bg-white border border-[var(--line)] p-4">
+              <h3 class="font-bold text-lg">Our Vision</h3>
+              <p class="mt-2 text-sm text-[var(--muted)]">To be the leading financial catalyst for a prosperous and financially inclusive Malawi.</p>
+            </article>
+          </div>
+
+          <div>
+            <span class="inline-flex rounded-full border border-[#e7d2d3] px-3 py-1 text-xs text-[var(--brand)] bg-white">Trusted Since 2025</span>
+            <h2 class="mt-4 text-3xl font-extrabold leading-tight">Your Partner in Financial Growth &amp; Stability</h2>
+            <p class="mt-4 text-[var(--muted)]">
+              Times Capital Finance is more than just a lender. We are a locally rooted institution dedicated to understanding the unique financial landscape of Malawi.
+            </p>
+            <ul class="mt-5 space-y-3 text-sm">
+              <li class="flex gap-2"><span class="material-symbols-outlined text-green-700 text-base">check_circle</span>Locally managed and owned.</li>
+              <li class="flex gap-2"><span class="material-symbols-outlined text-green-700 text-base">check_circle</span>Regulatory compliant and supervised by RBM.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-width mt-16">
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold">Our Financial Solutions</h2>
+          <p class="text-[var(--muted)] mt-2">Explore our range of credit and advisory services designed to meet your specific needs.</p>
+        </div>
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <article class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">credit_card</span><h3 class="font-bold mt-3">Salary-Based Loans</h3><p class="text-sm text-[var(--muted)] mt-2">Fast personal loans for civil servants and private sector employees.</p></article>
+          <article class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">emergency</span><h3 class="font-bold mt-3">Emergency Loans</h3><p class="text-sm text-[var(--muted)] mt-2">24-hour turnaround for unexpected medical bills and urgent needs.</p></article>
+          <article class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">storefront</span><h3 class="font-bold mt-3">SME Financing</h3><p class="text-sm text-[var(--muted)] mt-2">Flexible working capital and growth support for enterprises.</p></article>
+          <article class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">construction</span><h3 class="font-bold mt-3">Asset Financing</h3><p class="text-sm text-[var(--muted)] mt-2">Acquire machinery and equipment with manageable terms.</p></article>
+          <article class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">monitoring</span><h3 class="font-bold mt-3">Financial Advisory</h3><p class="text-sm text-[var(--muted)] mt-2">Practical guidance for debt, savings, and growth planning.</p></article>
+          <article class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">smartphone</span><h3 class="font-bold mt-3">Digital Banking</h3><p class="text-sm text-[var(--muted)] mt-2">Apply and manage services from your phone, anywhere.</p></article>
+        </div>
+      </section>
+
+      <section class="site-width mt-16">
+        <div class="soft-panel p-6 md:p-9">
+          <h2 class="text-3xl font-extrabold text-center">Simple 4-Step Application</h2>
+          <p class="text-[var(--muted)] text-center mt-2">We’ve streamlined our process to ensure you get the funds you need quickly.</p>
+          <div class="hidden md:block mt-8 h-1 timeline-line"></div>
+          <div class="mt-6 grid md:grid-cols-4 gap-5 text-center">
+            <div><div class="mx-auto h-10 w-10 rounded-full bg-[var(--brand)] text-white text-sm font-bold flex items-center justify-center">01</div><h3 class="font-semibold mt-3">Apply Online</h3><p class="text-xs text-[var(--muted)] mt-1">Complete the form.</p></div>
+            <div><div class="mx-auto h-10 w-10 rounded-full bg-[var(--brand)] text-white text-sm font-bold flex items-center justify-center">02</div><h3 class="font-semibold mt-3">Verification</h3><p class="text-xs text-[var(--muted)] mt-1">Documents are checked.</p></div>
+            <div><div class="mx-auto h-10 w-10 rounded-full bg-[var(--brand)] text-white text-sm font-bold flex items-center justify-center">03</div><h3 class="font-semibold mt-3">Approval</h3><p class="text-xs text-[var(--muted)] mt-1">Get clear terms fast.</p></div>
+            <div><div class="mx-auto h-10 w-10 rounded-full bg-[var(--brand)] text-white text-sm font-bold flex items-center justify-center">04</div><h3 class="font-semibold mt-3">Disbursement</h3><p class="text-xs text-[var(--muted)] mt-1">Funds sent to account.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-width mt-16">
+        <h2 class="text-3xl font-extrabold text-center">Why Choose Times Capital?</h2>
+        <div class="mt-10 space-y-8">
+          <article class="grid lg:grid-cols-2 gap-6 items-center">
+            <div class="section-card p-6">
+              <h3 class="font-bold text-xl">Trust &amp; Security</h3>
+              <p class="text-[var(--muted)] mt-2">We prioritise your data integrity and the transparency of our financial process.</p>
+              <ul class="mt-4 space-y-2 text-sm">
+                <li class="flex gap-2"><span class="material-symbols-outlined text-green-700 text-base">check_circle</span>Transparent conditions</li>
+                <li class="flex gap-2"><span class="material-symbols-outlined text-green-700 text-base">check_circle</span>No hidden fees</li>
+                <li class="flex gap-2"><span class="material-symbols-outlined text-green-700 text-base">check_circle</span>Competitive rates</li>
+              </ul>
+            </div>
+            <img src="assets/people3.jpg" alt="Client meeting" class="rounded-xl h-60 w-full object-cover section-card" />
+          </article>
+
+          <article class="grid lg:grid-cols-2 gap-6 items-center">
+            <img src="assets/people4.jpg" alt="Fast service" class="rounded-xl h-60 w-full object-cover section-card lg:order-1 order-2" />
+            <div class="section-card p-6 lg:order-2 order-1">
+              <h3 class="font-bold text-xl">Speed &amp; Efficiency</h3>
+              <p class="text-[var(--muted)] mt-2">Our digital-first approach helps us process applications and disburse funds faster than traditional banks.</p>
+              <ul class="mt-4 space-y-2 text-sm">
+                <li class="flex gap-2"><span class="material-symbols-outlined text-green-700 text-base">check_circle</span>Transparent conditions</li>
+                <li class="flex gap-2"><span class="material-symbols-outlined text-green-700 text-base">check_circle</span>No hidden fees</li>
+                <li class="flex gap-2"><span class="material-symbols-outlined text-green-700 text-base">check_circle</span>Competitive rates</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="site-width mt-16">
+        <div class="soft-panel p-6">
+          <h2 class="text-3xl font-extrabold text-center">Voices of Our Customers</h2>
+          <div class="mt-6 grid md:grid-cols-3 gap-4">
+            <article class="pattern-red rounded-xl p-[1px]"><div class="rounded-[11px] bg-white p-4 h-full"><p class="text-sm text-[var(--muted)]">“The process was smooth and professional. I got support exactly when I needed it.”</p><p class="mt-3 text-xs font-semibold">— Esther B.</p></div></article>
+            <article class="pattern-red rounded-xl p-[1px]"><div class="rounded-[11px] bg-white p-4 h-full"><p class="text-sm text-[var(--muted)]">“As a business owner, I value clear terms and quick turnaround. They delivered both.”</p><p class="mt-3 text-xs font-semibold">— Humphrey P.</p></div></article>
+            <article class="pattern-red rounded-xl p-[1px]"><div class="rounded-[11px] bg-white p-4 h-full"><p class="text-sm text-[var(--muted)]">“Transparent, helpful, and fast. I recommend Times Capital to anyone needing financing.”</p><p class="mt-3 text-xs font-semibold">— Irene M.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-width mt-16">
+        <div class="grid lg:grid-cols-2 gap-6 items-center">
+          <div>
+            <h2 class="text-3xl font-extrabold">Get in Touch</h2>
+            <p class="mt-2 text-[var(--muted)]">Have questions? Our support team is here to assist you.</p>
+            <div class="mt-6 space-y-4 text-sm">
+              <p class="flex items-center gap-3"><span class="icon-chip flex"><span class="material-symbols-outlined text-base">call</span></span><span><strong>+265 881 234 567</strong></span></p>
+              <p class="flex items-center gap-3"><span class="icon-chip flex"><span class="material-symbols-outlined text-base">mail</span></span><span>support@timescapital.mw</span></p>
+              <p class="flex items-center gap-3"><span class="icon-chip flex"><span class="material-symbols-outlined text-base">location_on</span></span><span>Times Offices, Chilambula Road, Lilongwe</span></p>
+            </div>
+          </div>
+          <div class="section-card rounded-xl h-72 p-4 bg-[linear-gradient(135deg,#ece9e0,#f8f5ef)]">
+            <div class="h-full w-full rounded-lg border border-white/60 bg-[linear-gradient(45deg,#f0ece3_25%,#e8e2d5_25%,#e8e2d5_50%,#f0ece3_50%,#f0ece3_75%,#e8e2d5_75%,#e8e2d5_100%)] bg-[length:28px_28px] relative">
+              <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white/95 px-4 py-3 border border-[var(--line)] text-center">
+                <span class="material-symbols-outlined text-[var(--brand)] text-2xl">location_on</span>
+                <p class="text-xs font-semibold">Times Capital Finance</p>
+                <p class="text-[11px] text-[var(--muted)]">Lilongwe, Malawi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-width mt-16">
+        <div class="soft-panel p-6">
+          <h2 class="text-3xl font-extrabold text-center">Frequently Asked Questions</h2>
+          <div class="mt-6 space-y-3 max-w-4xl mx-auto">
+            <details class="faq-item section-card" open>
+              <summary class="cursor-pointer p-4 font-semibold flex items-center justify-between">What are the eligibility requirements for a loan?<span class="material-symbols-outlined chev">expand_more</span></summary>
+              <p class="px-4 pb-4 text-sm text-[var(--muted)]">You should be a Malawian resident, 18+, with a verifiable source of income and valid identification.</p>
+            </details>
+            <details class="faq-item section-card">
+              <summary class="cursor-pointer p-4 font-semibold flex items-center justify-between">How long does the approval process take?<span class="material-symbols-outlined chev">expand_more</span></summary>
+              <p class="px-4 pb-4 text-sm text-[var(--muted)]">Most applications are reviewed within 24 hours after complete documentation.</p>
+            </details>
+            <details class="faq-item section-card">
+              <summary class="cursor-pointer p-4 font-semibold flex items-center justify-between">Are there any hidden fees?<span class="material-symbols-outlined chev">expand_more</span></summary>
+              <p class="px-4 pb-4 text-sm text-[var(--muted)]">No. All charges and terms are disclosed clearly in your agreement.</p>
+            </details>
+            <details class="faq-item section-card">
+              <summary class="cursor-pointer p-4 font-semibold flex items-center justify-between">Can I settle my loan early?<span class="material-symbols-outlined chev">expand_more</span></summary>
+              <p class="px-4 pb-4 text-sm text-[var(--muted)]">Yes, early settlement is supported on most products.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="site-width mt-16">
+        <div class="pattern-red rounded-2xl p-8 md:p-12 text-center text-white">
+          <h2 class="text-4xl font-extrabold leading-tight">Ready to Take Your Next<br />Financial Step?</h2>
+          <p class="mt-4 text-white/85 max-w-2xl mx-auto">Join 15,000+ Malawians who trust Times Capital Finance for fair and practical financial services.</p>
+          <div class="mt-6 flex justify-center gap-3 flex-wrap">
+            <button class="rounded-full bg-white text-[var(--brand)] px-6 py-3 text-sm font-semibold">Download Form</button>
+            <button class="rounded-full border border-white/60 px-6 py-3 text-sm font-semibold">Talk to Expert</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-[var(--line)] py-12 bg-[#f8f8f8]">
+      <div class="site-width grid md:grid-cols-4 gap-8">
+        <div>
+          <img src="assets/logo.svg" alt="Times Capital Finance" class="h-10 w-auto" />
+          <p class="text-sm text-[var(--muted)] mt-3">Your trusted financial partner in Malawi. Licensed and regulated by the Reserve Bank of Malawi.</p>
+        </div>
+        <div>
+          <h3 class="font-bold">Services</h3>
+          <ul class="text-sm text-[var(--muted)] space-y-2 mt-3">
+            <li>Salary Loans</li>
+            <li>Business Capital</li>
+            <li>Emergency Funds</li>
+            <li>Asset Financing</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Company</h3>
+          <ul class="text-sm text-[var(--muted)] space-y-2 mt-3">
+            <li>Careers</li>
+            <li>News &amp; Press</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Support</h3>
+          <ul class="text-sm text-[var(--muted)] space-y-2 mt-3">
+            <li>Help Center</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>Loan Calculator</li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-width mt-8 pt-6 border-t border-[var(--line)] text-xs text-[var(--muted)] flex flex-wrap justify-between gap-3">
+        <span>© 2026 Times Capital Finance Limited. All rights reserved.</span>
+        <span>Reserve Bank License No: TC-044-2014</span>
+      </div>
+    </footer>
+  </body>
+</html>
