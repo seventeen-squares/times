@@ -44,7 +44,7 @@
         min-height: 560px;
         background:
           linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 100%),
-          url("assets/person1.jpg") center top / cover no-repeat;
+          url("assets/hero.png") center top / cover no-repeat;
         position: relative;
         overflow: hidden;
       }
@@ -61,7 +61,14 @@
       }
 
       .glass-nav {
-        border: 1px solid rgba(255, 255, 255, 0.45);
+        border: 1px solid transparent;
+        background: transparent;
+        backdrop-filter: blur(0px);
+        transition: border-color 0.2s, background 0.2s, backdrop-filter 0.2s;
+      }
+
+      .glass-nav:hover {
+        border-color: rgba(255, 255, 255, 0.45);
         background: rgba(255, 255, 255, 0.16);
         backdrop-filter: blur(4px);
       }
@@ -100,13 +107,14 @@
       .pattern-red {
         background:
           linear-gradient(0deg, rgba(63, 10, 12, 0.7), rgba(63, 10, 12, 0.7)),
-          repeating-linear-gradient(
+          /* repeating-linear-gradient(
             45deg,
             #7f1b1f 0,
             #7f1b1f 18px,
             #90262a 18px,
             #90262a 36px
-          );
+          ) */
+          url("assets/finalsteps.png") center;
       }
 
       .faq-item[open] summary .chev {
@@ -194,7 +202,7 @@
       <section class="site-width mt-14">
         <div class="soft-panel p-5 md:p-7 grid lg:grid-cols-2 gap-8 items-center">
           <div class="grid grid-cols-2 gap-4">
-            <img src="assets/people2.jpg" alt="Growing savings" class="rounded-xl h-56 w-full object-cover col-span-2" />
+            <img src="assets/cointree.jpg" alt="Growing savings" class="rounded-xl h-56 w-full object-cover col-span-2" />
             <article class="rounded-xl bg-[var(--brand)] text-white p-4">
               <h3 class="font-bold text-lg">Our Mission</h3>
               <p class="mt-2 text-sm">To provide accessible, ethical, and innovative financial services that foster economic growth in Malawi.</p>
