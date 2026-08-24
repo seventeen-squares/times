@@ -167,8 +167,8 @@
             <a href="#" class="glass-nav rounded-full px-5 py-2">Contact Us</a>
           </nav>
           <div class="flex items-center gap-2">
-            <button class="hidden sm:inline-flex rounded-full px-4 py-2 text-sm">Login</button>
-            <button class="inline-flex rounded-full px-5 py-2 text-sm bg-[var(--brand)] hover:bg-[var(--brand-dark)] transition">
+            <button disabled title="will be available soon" class="hidden sm:inline-flex rounded-full px-4 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-60">Login</button>
+            <button disabled title="will be available soon" class="inline-flex rounded-full px-5 py-2 text-sm bg-[var(--brand)] hover:bg-[var(--brand-dark)] transition disabled:cursor-not-allowed disabled:opacity-60">
               Get started
             </button>
           </div>
@@ -184,13 +184,13 @@
             Dedicated, reliable credit solutions for civil servants, business owners, and families.
           </p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <button class="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-semibold hover:bg-[var(--brand-dark)] transition">
+            <a href="#download-forms" class="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] px-6 py-3 text-sm font-semibold hover:bg-[var(--brand-dark)] transition">
               Apply For Loan
               <span class="material-symbols-outlined text-base">arrow_forward</span>
-            </button>
-            <button class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100 transition">
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100 transition">
               Contact Us
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -294,7 +294,7 @@
         </div>
       </section>
 
-      <section class="site-width mt-20">
+      <section id="contact" class="site-width mt-20">
         <h2 class="text-3xl font-extrabold text-center">Why Choose Times Capital?</h2>
         <div class="mt-12 space-y-10">
           <article class="grid lg:grid-cols-2 gap-6 items-center">
@@ -442,7 +442,7 @@
         </div>
       </section>
 
-      <section class="site-width mt-16">
+      <section id="download-forms" class="site-width mt-16">
         <div data-reveal="zoom" class="pattern-red rounded-2xl p-8 md:p-12 text-center text-white">
           <h2 class="text-4xl font-extrabold leading-tight">Ready to Take Your Next<br />Financial Step?</h2>
           <p class="mt-4 text-white/85 max-w-2xl mx-auto">Join 15,000+ Malawians who trust Times Capital Finance for fair and practical financial services.</p>
