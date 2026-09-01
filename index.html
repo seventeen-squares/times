@@ -23,9 +23,17 @@
         --panel: #f7f7f7;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: "Manrope", sans-serif;
         color: var(--text);
+      }
+
+      [id] {
+        scroll-margin-top: 96px;
       }
 
       .material-symbols-outlined {
@@ -161,10 +169,10 @@
             <img src="assets/logo.svg" alt="Times Capital Finance" class="h-11 w-auto" />
           </a>
           <nav class="hidden lg:flex items-center gap-2 text-sm">
-            <a href="#" class="glass-nav rounded-full px-5 py-2">About</a>
-            <a href="#" class="glass-nav rounded-full px-5 py-2">Personal Loans</a>
-            <a href="#" class="glass-nav rounded-full px-5 py-2">Business Solutions</a>
-            <a href="#" class="glass-nav rounded-full px-5 py-2">Contact Us</a>
+            <a href="#about" class="glass-nav rounded-full px-5 py-2">About</a>
+            <a href="#personal-loans" class="glass-nav rounded-full px-5 py-2">Personal Loans</a>
+            <a href="#solutions" class="glass-nav rounded-full px-5 py-2">Business Solutions</a>
+            <a href="#contact" class="glass-nav rounded-full px-5 py-2">Contact Us</a>
           </nav>
           <div class="flex items-center gap-2">
             <button disabled title="will be available soon" class="hidden sm:inline-flex rounded-full px-4 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-60">Login</button>
@@ -227,7 +235,7 @@
         </div>
       </section>
 
-      <section class="site-width mt-14">
+      <section id="about" class="site-width mt-14">
         <div class="soft-panel p-5 md:p-7 grid lg:grid-cols-2 gap-8 items-center">
           <div data-reveal="left" class="grid grid-cols-2 gap-4">
             <img src="assets/cointree.jpg" alt="Growing savings" class="rounded-xl h-56 w-full object-cover col-span-2" />
@@ -255,13 +263,13 @@
         </div>
       </section>
 
-      <section class="site-width mt-16">
+      <section id="solutions" class="site-width mt-16">
         <div data-reveal="up" class="text-center">
           <h2 class="text-3xl font-extrabold">Our Financial Solutions</h2>
           <p class="text-[var(--muted)] mt-2">Explore our range of credit and advisory services designed to meet your specific needs.</p>
         </div>
         <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <article data-reveal="up" data-delay="1" class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">payments</span><h3 class="font-bold mt-3">Personal Loans</h3><p class="text-sm text-[var(--muted)] mt-2">Fast personal loans for civil servants and private sector employees with competitive interest rates.</p></article>
+          <article id="personal-loans" data-reveal="up" data-delay="1" class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">payments</span><h3 class="font-bold mt-3">Personal Loans</h3><p class="text-sm text-[var(--muted)] mt-2">Fast personal loans for civil servants and private sector employees with competitive interest rates.</p></article>
           <article data-reveal="up" data-delay="2" class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">group</span><h3 class="font-bold mt-3">Group Business Loans</h3><p class="text-sm text-[var(--muted)] mt-2"> Financial solutions focused on empowering community groups and women entrepreneur </p></article>
           <article data-reveal="up" data-delay="3" class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">assured_workload</span><h3 class="font-bold mt-3">SME Financing</h3><p class="text-sm text-[var(--muted)] mt-2"> Flexible working capital and growth capital for medium-sized enterprises.</p></article>
           <article data-reveal="up" data-delay="4" class="section-card p-5"><span class="material-symbols-outlined text-[var(--brand)]">credit_card</span><h3 class="font-bold mt-3">Payroll / Employer-Supported</h3><p class="text-sm text-[var(--muted)] mt-2"> Convenient loan options for salary employees with employer supportport.</p></article>
@@ -294,7 +302,7 @@
         </div>
       </section>
 
-      <section id="contact" class="site-width mt-20">
+      <section id="why-us" class="site-width mt-20">
         <h2 class="text-3xl font-extrabold text-center">Why Choose Times Capital?</h2>
         <div class="mt-12 space-y-10">
           <article class="grid lg:grid-cols-2 gap-6 items-center">
@@ -375,7 +383,7 @@
         </div>
       </section>
 
-      <section class="site-width mt-20">
+      <section id="contact" class="site-width mt-20">
         <div class="grid lg:grid-cols-2 gap-8 items-center">
           <div data-reveal="left">
             <h2 class="text-3xl font-extrabold">Get in Touch</h2>
@@ -444,8 +452,8 @@
 
       <section id="download-forms" class="site-width mt-16">
         <div data-reveal="zoom" class="pattern-red rounded-2xl p-8 md:p-12 text-center text-white">
-          <h2 class="text-4xl font-extrabold leading-tight">Ready to Take Your Next<br />Financial Step?</h2>
-          <p class="mt-4 text-white/85 max-w-2xl mx-auto">Join 15,000+ Malawians who trust Times Capital Finance for fair and practical financial services.</p>
+          <h2 class="text-4xl font-extrabold leading-tight">Ready to Take Your Next Step?</h2>
+          <p class="mt-4 text-white/85 max-w-2xl mx-auto">We’re here to support your personal and business growth.</p>
           <div class="mt-6 flex justify-center gap-3 flex-wrap">
             <a href="TCFL%20-%20BUSINESS%20OR%20MSME%20LOAN%20APPLICATION%20FORM.docx" download class="rounded-full bg-white text-[var(--brand)] px-6 py-3 text-sm font-semibold">Download Business or MSME Form</a>
             <a href="TCFL%20-%20PERSONAL%20LOAN%20APPLICATION%20FORM.docx" download class="rounded-full bg-white text-[var(--brand)] px-6 py-3 text-sm font-semibold">Download Personal Loan Form</a>
